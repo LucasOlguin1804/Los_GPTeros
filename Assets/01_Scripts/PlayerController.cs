@@ -4,29 +4,47 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movimiento")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
 
+    [Header("Detección de Suelo")]
+    public Transform groundCheck;          // Punto bajo del jugador
+    public float groundCheckRadius = 0.2f; // Radio del círculo de detección
+    public LayerMask groundLayer;          // Capa del suelo
+
+    [Header("Coyote Time")]
+    public float coyoteTime = 0.1f;
+    private float coyoteCounter;
+
     private Rigidbody2D rb;
     private bool isGrounded = false;
-    private float coyoteTime = 0.1f;
-    private float coyoteCounter;
     private bool facingRight = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
-        rb.sharedMaterial = new PhysicsMaterial2D { friction = 0, bounciness = 0 };
+
+        // Evita que el jugador se "pegue" por fricción
+        rb.sharedMaterial = new PhysicsMaterial2D
+        {
+            friction = 0,
+            bounciness = 0
+        };
     }
 
     void Update()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
+        HandleMovement();
         HandleFacing();
         HandleJump();
+    }
+
+    void HandleMovement()
+    {
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
     }
 
     void HandleFacing()
@@ -34,22 +52,23 @@ public class PlayerController : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (mousePos.x > transform.position.x && !facingRight)
-        {
             Flip();
-        }
         else if (mousePos.x < transform.position.x && facingRight)
-        {
             Flip();
-        }
     }
 
     void HandleJump()
     {
+        // 🔍 Nueva detección de suelo por OverlapCircle
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        // Coyote time
         if (isGrounded)
             coyoteCounter = coyoteTime;
         else
             coyoteCounter -= Time.deltaTime;
 
+        // Salto
         if (Input.GetButtonDown("Jump") && coyoteCounter > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -65,25 +84,17 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        foreach (ContactPoint2D contact in collision.contacts)
-        {
-            if (contact.normal.y > 0.5f)
-            {
-                isGrounded = true;
-                return;
-            }
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        isGrounded = false;
-    }
-
     public int GetDirection()
     {
         return facingRight ? 1 : -1;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
     }
 }
