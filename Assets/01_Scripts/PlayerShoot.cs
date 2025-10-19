@@ -8,8 +8,8 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint;       // Punto de salida del disparo
     public float bulletSpeed = 10f;   // Velocidad de la bala
 
-    private Vector2 lookDir;          // Dirección hacia el mouse
-    private float minDistance = 0.2f; // Distancia mínima para evitar disparos lentos
+    private Vector2 lookDir;          // Direcciï¿½n hacia el mouse
+    private float minDistance = 0.2f; // Distancia mï¿½nima para evitar disparos lentos
 
     void Update()
     {
@@ -25,24 +25,24 @@ public class PlayerShoot : MonoBehaviour
     {
         if (firePoint == null) return;
 
-        // Posición del mouse en coordenadas del mundo
+        // Posiciï¿½n del mouse en coordenadas del mundo
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         // Calcular vector desde el FirePoint al mouse
         Vector2 rawDir = mousePos - firePoint.position;
         float distance = rawDir.magnitude;
 
-        // Evita valores demasiado pequeños que provocan disparos lentos
+        // Evita valores demasiado pequeï¿½os que provocan disparos lentos
         if (distance < minDistance)
         {
-            // Mantén la última dirección válida, no recalcules aún
+            // Mantï¿½n la ï¿½ltima direcciï¿½n vï¿½lida, no recalcules aï¿½n
             return;
         }
 
-        // Normalizar dirección
+        // Normalizar direcciï¿½n
         lookDir = rawDir.normalized;
 
-        // Calcular el ángulo de rotación del FirePoint
+        // Calcular el ï¿½ngulo de rotaciï¿½n del FirePoint
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
@@ -51,7 +51,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (bulletPrefab == null || firePoint == null) return;
 
-        // Si el mouse está demasiado cerca, no dispares
+        // Si el mouse estï¿½ demasiado cerca, no dispares
         if (lookDir == Vector2.zero) return;
 
         // Crear la bala
@@ -61,7 +61,7 @@ public class PlayerShoot : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = lookDir * bulletSpeed;
 
-        // Destruir después de un tiempo
+        // Destruir despuï¿½s de un tiempo
         Destroy(bullet, 2f);
     }
 }

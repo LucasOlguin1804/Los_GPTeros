@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &6171884536979751777
+=======
+--- !u!1 &4493411746598649581
+>>>>>>> origin/Feature_Level1
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,6 +12,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 6171884536979751778}
   m_Layer: 0
   m_Name: GroundCheck
@@ -74,6 +79,14 @@ GameObject:
   - component: {fileID: 6171884537104351457}
   - component: {fileID: 6171884537104351456}
   - component: {fileID: 6171884537104351471}
+=======
+  - component: {fileID: 4493411746598649590}
+  - component: {fileID: 4493411746598649585}
+  - component: {fileID: 4493411746598649584}
+  - component: {fileID: 4493411746598649587}
+  - component: {fileID: 4493411746598649586}
+  - component: {fileID: 4493411746598649591}
+>>>>>>> origin/Feature_Level1
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -81,12 +94,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &6171884537104351460
+=======
+--- !u!4 &4493411746598649590
+>>>>>>> origin/Feature_Level1
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 6171884537104351470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.069628, y: -3.0362766, z: 0}
@@ -98,12 +116,28 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6171884537104351459
+=======
+  m_GameObject: {fileID: 4493411746598649581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: -2.57, z: 0}
+  m_LocalScale: {x: 0.7387, y: 0.73869747, z: 1}
+  m_Children:
+  - {fileID: 4493411747012745752}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &4493411746598649585
+>>>>>>> origin/Feature_Level1
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 6171884537104351470}
+=======
+  m_GameObject: {fileID: 4493411746598649581}
+>>>>>>> origin/Feature_Level1
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -148,14 +182,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!50 &6171884537104351458
+=======
+--- !u!50 &4493411746598649584
+>>>>>>> origin/Feature_Level1
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 6171884537104351470}
+=======
+  m_GameObject: {fileID: 4493411746598649581}
+>>>>>>> origin/Feature_Level1
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -169,13 +211,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+<<<<<<< HEAD
 --- !u!70 &6171884537104351457
+=======
+--- !u!70 &4493411746598649587
+>>>>>>> origin/Feature_Level1
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 6171884537104351470}
+=======
+  m_GameObject: {fileID: 4493411746598649581}
+>>>>>>> origin/Feature_Level1
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -185,13 +235,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+<<<<<<< HEAD
 --- !u!114 &6171884537104351456
+=======
+--- !u!114 &4493411746598649586
+>>>>>>> origin/Feature_Level1
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 6171884537104351470}
+=======
+  m_GameObject: {fileID: 4493411746598649581}
+>>>>>>> origin/Feature_Level1
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07d801aac0582b04db26e484ff742da1, type: 3}
@@ -199,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 10
+<<<<<<< HEAD
   groundCheck: {fileID: 6171884536979751778}
   groundCheckRadius: 0.2
   groundLayer:
@@ -206,17 +265,59 @@ MonoBehaviour:
     m_Bits: 64
   coyoteTime: 0.1
 --- !u!114 &6171884537104351471
+=======
+--- !u!114 &4493411746598649591
+>>>>>>> origin/Feature_Level1
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 6171884537104351470}
+=======
+  m_GameObject: {fileID: 4493411746598649581}
+>>>>>>> origin/Feature_Level1
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5669fa0b06898144d96a905570817d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6233664731384207147, guid: f9cc18799a9f84545b47a008cc5d559f, type: 3}
+<<<<<<< HEAD
   firePoint: {fileID: 6171884536984445422}
   bulletSpeed: 15
+=======
+  firePoint: {fileID: 4493411747012745752}
+  bulletSpeed: 10
+--- !u!1 &4493411747012745755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4493411747012745752}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4493411747012745752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493411747012745755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4493411746598649590}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> origin/Feature_Level1
