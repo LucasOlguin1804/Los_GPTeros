@@ -871,8 +871,8 @@ GameObject:
   - component: {fileID: 661568311}
   - component: {fileID: 661568310}
   - component: {fileID: 661568309}
-  - component: {fileID: 661568308}
   - component: {fileID: 661568307}
+  - component: {fileID: 661568308}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -908,7 +908,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 15
+  jumpForce: 10
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  coyoteTime: 0.1
 --- !u!70 &661568309
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
