@@ -134,11 +134,7 @@ GameObject:
   - component: {fileID: 21950843}
   - component: {fileID: 21950845}
   - component: {fileID: 21950844}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,11 +243,7 @@ GameObject:
   - component: {fileID: 49741509}
   - component: {fileID: 49741511}
   - component: {fileID: 49741510}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,11 +352,7 @@ GameObject:
   - component: {fileID: 62123879}
   - component: {fileID: 62123881}
   - component: {fileID: 62123880}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,11 +461,7 @@ GameObject:
   - component: {fileID: 109465404}
   - component: {fileID: 109465406}
   - component: {fileID: 109465405}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,11 +570,7 @@ GameObject:
   - component: {fileID: 170597304}
   - component: {fileID: 170597306}
   - component: {fileID: 170597305}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,11 +679,7 @@ GameObject:
   - component: {fileID: 182341580}
   - component: {fileID: 182341582}
   - component: {fileID: 182341581}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,18 +777,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!1001 &319018805
-=======
---- !u!1001 &309757961
->>>>>>> origin/Feature_Level1
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
     - target: {fileID: 473848538417940203, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
       propertyPath: m_Name
       value: CameraFollow
@@ -972,62 +943,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
-    - target: {fileID: 4493411746598649581, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.069628
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.0362766
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649590, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493411746598649591, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-      propertyPath: bulletSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
->>>>>>> origin/Feature_Level1
 --- !u!1 &425211935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,11 +991,8 @@ Transform:
   - {fileID: 1595159567}
   - {fileID: 1912429215}
   - {fileID: 807104106}
-<<<<<<< HEAD
   - {fileID: 337858463}
   - {fileID: 703116085}
-=======
->>>>>>> origin/Feature_Level1
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1095,11 +1007,7 @@ GameObject:
   - component: {fileID: 440648061}
   - component: {fileID: 440648063}
   - component: {fileID: 440648062}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,11 +1116,7 @@ GameObject:
   - component: {fileID: 542015706}
   - component: {fileID: 542015708}
   - component: {fileID: 542015707}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1310,7 +1214,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!1 &703116084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,8 +1323,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> origin/Feature_Level1
 --- !u!1 &726673399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,11 +1334,7 @@ GameObject:
   - component: {fileID: 726673400}
   - component: {fileID: 726673402}
   - component: {fileID: 726673401}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1629,11 +1526,7 @@ GameObject:
   - component: {fileID: 807104106}
   - component: {fileID: 807104108}
   - component: {fileID: 807104107}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,11 +1635,7 @@ GameObject:
   - component: {fileID: 1495397267}
   - component: {fileID: 1495397269}
   - component: {fileID: 1495397268}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,11 +1744,7 @@ GameObject:
   - component: {fileID: 1551715309}
   - component: {fileID: 1551715311}
   - component: {fileID: 1551715310}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1968,11 +1853,7 @@ GameObject:
   - component: {fileID: 1557982852}
   - component: {fileID: 1557982854}
   - component: {fileID: 1557982853}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,11 +1962,7 @@ GameObject:
   - component: {fileID: 1595159567}
   - component: {fileID: 1595159569}
   - component: {fileID: 1595159568}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2194,11 +2071,7 @@ GameObject:
   - component: {fileID: 1637516057}
   - component: {fileID: 1637516059}
   - component: {fileID: 1637516058}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,11 +2180,7 @@ GameObject:
   - component: {fileID: 1696167342}
   - component: {fileID: 1696167344}
   - component: {fileID: 1696167343}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2420,11 +2289,7 @@ GameObject:
   - component: {fileID: 1700934798}
   - component: {fileID: 1700934800}
   - component: {fileID: 1700934799}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,11 +2398,7 @@ GameObject:
   - component: {fileID: 1781839552}
   - component: {fileID: 1781839554}
   - component: {fileID: 1781839553}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2646,11 +2507,7 @@ GameObject:
   - component: {fileID: 1912429215}
   - component: {fileID: 1912429217}
   - component: {fileID: 1912429216}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2759,11 +2616,7 @@ GameObject:
   - component: {fileID: 2058207441}
   - component: {fileID: 2058207443}
   - component: {fileID: 2058207442}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2872,11 +2725,7 @@ GameObject:
   - component: {fileID: 2144690460}
   - component: {fileID: 2144690462}
   - component: {fileID: 2144690461}
-<<<<<<< HEAD
   m_Layer: 6
-=======
-  m_Layer: 0
->>>>>>> origin/Feature_Level1
   m_Name: Ground (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2974,7 +2823,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!1001 &6171884535996645240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3032,5 +2880,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc795f70dd16e044390456336d1bf3af, type: 3}
-=======
->>>>>>> origin/Feature_Level1
