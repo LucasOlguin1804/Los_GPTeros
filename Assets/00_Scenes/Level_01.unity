@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 167199660}
   - component: {fileID: 167199659}
   - component: {fileID: 167199661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 296428074}
   - component: {fileID: 296428076}
   - component: {fileID: 296428075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,8 +436,8 @@ GameObject:
   - component: {fileID: 356103284}
   - component: {fileID: 356103282}
   - component: {fileID: 356103285}
-  m_Layer: 0
-  m_Name: Square (15)
+  m_Layer: 6
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -652,8 +652,8 @@ GameObject:
   - component: {fileID: 646886131}
   - component: {fileID: 646886130}
   - component: {fileID: 646886132}
-  m_Layer: 0
-  m_Name: Square (12)
+  m_Layer: 6
+  m_Name: Ground(3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 649366035}
   - component: {fileID: 649366034}
   - component: {fileID: 649366036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,11 +909,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 10
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 816067875}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   coyoteTime: 0.1
 --- !u!70 &661568309
 CapsuleCollider2D:
@@ -1016,6 +1016,7 @@ Transform:
   m_Children:
   - {fileID: 800153484}
   - {fileID: 1974092488}
+  - {fileID: 816067875}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1101,6 +1102,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &746043037
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 473848538417940203, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_Name
+      value: CameraFollow
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.74970126
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.115607604
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.150399
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473848538417940207, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 359c01fb124219847a0b1bd92d48bcc0, type: 3}
 --- !u!1 &800153483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1200,7 @@ GameObject:
   - component: {fileID: 808118986}
   - component: {fileID: 808118985}
   - component: {fileID: 808118987}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,6 +1308,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &816067874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816067875}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &816067875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816067874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661568312}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854657226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,8 +1513,8 @@ GameObject:
   - component: {fileID: 1010177967}
   - component: {fileID: 1010177966}
   - component: {fileID: 1010177968}
-  m_Layer: 0
-  m_Name: Square (18)
+  m_Layer: 6
+  m_Name: Ground(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1534,7 +1622,7 @@ GameObject:
   - component: {fileID: 1040513148}
   - component: {fileID: 1040513147}
   - component: {fileID: 1040513149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1829,8 +1917,8 @@ GameObject:
   - component: {fileID: 1374143828}
   - component: {fileID: 1374143827}
   - component: {fileID: 1374143829}
-  m_Layer: 0
-  m_Name: Square (5)
+  m_Layer: 6
+  m_Name: Ground(4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1938,7 +2026,7 @@ GameObject:
   - component: {fileID: 1426555123}
   - component: {fileID: 1426555125}
   - component: {fileID: 1426555124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2129,7 +2217,7 @@ GameObject:
   - component: {fileID: 1544303759}
   - component: {fileID: 1544303758}
   - component: {fileID: 1544303760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2320,7 +2408,7 @@ GameObject:
   - component: {fileID: 1697351898}
   - component: {fileID: 1697351897}
   - component: {fileID: 1697351899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2429,7 +2517,7 @@ GameObject:
   - component: {fileID: 1779260153}
   - component: {fileID: 1779260152}
   - component: {fileID: 1779260154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2538,7 +2626,7 @@ GameObject:
   - component: {fileID: 1809165560}
   - component: {fileID: 1809165559}
   - component: {fileID: 1809165561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2647,7 +2735,7 @@ GameObject:
   - component: {fileID: 1918735379}
   - component: {fileID: 1918735378}
   - component: {fileID: 1918735380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2876,8 +2964,8 @@ GameObject:
   - component: {fileID: 2028182133}
   - component: {fileID: 2028182132}
   - component: {fileID: 2028182134}
-  m_Layer: 0
-  m_Name: Square (3)
+  m_Layer: 6
+  m_Name: Ground(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
