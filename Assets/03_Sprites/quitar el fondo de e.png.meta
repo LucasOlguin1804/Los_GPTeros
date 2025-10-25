@@ -1,0 +1,3253 @@
+fileFormatVersion: 2
+guid: 8efd63662dd300c448cc6b5f8ba8369a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4311233255183984066
+    second: quitar el fondo de e_0
+  - first:
+      213: -3688354963540538336
+    second: quitar el fondo de e_1
+  - first:
+      213: -7500017080315930019
+    second: quitar el fondo de e_2
+  - first:
+      213: 2355969336236903967
+    second: quitar el fondo de e_3
+  - first:
+      213: -5522025238828484570
+    second: quitar el fondo de e_4
+  - first:
+      213: 4693496471070164857
+    second: quitar el fondo de e_5
+  - first:
+      213: -2112119904177675166
+    second: quitar el fondo de e_6
+  - first:
+      213: 3827482071413491258
+    second: quitar el fondo de e_7
+  - first:
+      213: -5127503173174762168
+    second: quitar el fondo de e_8
+  - first:
+      213: -5596086472422535755
+    second: quitar el fondo de e_9
+  - first:
+      213: -5574200436860022499
+    second: quitar el fondo de e_10
+  - first:
+      213: 3659541161300610680
+    second: quitar el fondo de e_11
+  - first:
+      213: 6396166172193153496
+    second: quitar el fondo de e_12
+  - first:
+      213: 7707219749309500617
+    second: quitar el fondo de e_13
+  - first:
+      213: -2856470982584579748
+    second: quitar el fondo de e_14
+  - first:
+      213: -910723707886649535
+    second: quitar el fondo de e_15
+  - first:
+      213: -3677621418236018947
+    second: quitar el fondo de e_16
+  - first:
+      213: -4809025151206388108
+    second: quitar el fondo de e_17
+  - first:
+      213: -9132148532564272115
+    second: quitar el fondo de e_18
+  - first:
+      213: -1959462678440633772
+    second: quitar el fondo de e_19
+  - first:
+      213: 613975361591835615
+    second: quitar el fondo de e_20
+  - first:
+      213: 9087292794205892823
+    second: quitar el fondo de e_21
+  - first:
+      213: -6947642500285173902
+    second: quitar el fondo de e_22
+  - first:
+      213: 82399401347192607
+    second: quitar el fondo de e_23
+  - first:
+      213: -5251188058321185142
+    second: quitar el fondo de e_24
+  - first:
+      213: -4406230280200544244
+    second: quitar el fondo de e_25
+  - first:
+      213: -2320247140120299444
+    second: quitar el fondo de e_26
+  - first:
+      213: -4543928944264827947
+    second: quitar el fondo de e_27
+  - first:
+      213: 1350993798181410479
+    second: quitar el fondo de e_28
+  - first:
+      213: 1301418847811634066
+    second: quitar el fondo de e_29
+  - first:
+      213: 5069129146381006141
+    second: quitar el fondo de e_30
+  - first:
+      213: -6343102656550763355
+    second: quitar el fondo de e_31
+  - first:
+      213: -7739901871568453514
+    second: quitar el fondo de e_32
+  - first:
+      213: 2527533131595619078
+    second: quitar el fondo de e_33
+  - first:
+      213: -5429546298755949060
+    second: quitar el fondo de e_34
+  - first:
+      213: -7308013697475037431
+    second: quitar el fondo de e_35
+  - first:
+      213: 1079223247949780869
+    second: quitar el fondo de e_36
+  - first:
+      213: 3231713725093641108
+    second: quitar el fondo de e_37
+  - first:
+      213: 3552749506156873446
+    second: quitar el fondo de e_38
+  - first:
+      213: -6867527969038319533
+    second: quitar el fondo de e_39
+  - first:
+      213: 4278860661749834094
+    second: quitar el fondo de e_40
+  - first:
+      213: -794506644043123728
+    second: quitar el fondo de e_41
+  - first:
+      213: -124192606660458441
+    second: quitar el fondo de e_42
+  - first:
+      213: -5277644529613008305
+    second: quitar el fondo de e_43
+  - first:
+      213: -2877836144674764654
+    second: quitar el fondo de e_44
+  - first:
+      213: 1651434350282899224
+    second: quitar el fondo de e_45
+  - first:
+      213: -6899890899452820956
+    second: quitar el fondo de e_46
+  - first:
+      213: -1511238066633373734
+    second: quitar el fondo de e_47
+  - first:
+      213: 1454746583987610330
+    second: quitar el fondo de e_48
+  - first:
+      213: 7564469249496673804
+    second: quitar el fondo de e_49
+  - first:
+      213: -6804154797786248961
+    second: quitar el fondo de e_50
+  - first:
+      213: -1904822722496321968
+    second: quitar el fondo de e_51
+  - first:
+      213: 8222470627383495977
+    second: quitar el fondo de e_52
+  - first:
+      213: -5123963975539407112
+    second: quitar el fondo de e_53
+  - first:
+      213: -7489089639497397198
+    second: quitar el fondo de e_54
+  - first:
+      213: -1264576529248674784
+    second: quitar el fondo de e_55
+  - first:
+      213: 4404639840015132389
+    second: quitar el fondo de e_56
+  - first:
+      213: 7142442210861953305
+    second: quitar el fondo de e_57
+  - first:
+      213: 8886572899295584426
+    second: quitar el fondo de e_58
+  - first:
+      213: -5675043792381101553
+    second: quitar el fondo de e_59
+  - first:
+      213: 1086395824088837019
+    second: quitar el fondo de e_60
+  - first:
+      213: -4587051996200609425
+    second: quitar el fondo de e_61
+  - first:
+      213: 3538882940455891065
+    second: quitar el fondo de e_62
+  - first:
+      213: 5247579563144946502
+    second: quitar el fondo de e_63
+  - first:
+      213: -2177909900784985604
+    second: quitar el fondo de e_64
+  - first:
+      213: -7972004060843007718
+    second: quitar el fondo de e_65
+  - first:
+      213: -8267261538846635257
+    second: quitar el fondo de e_66
+  - first:
+      213: -5101519482460516559
+    second: quitar el fondo de e_67
+  - first:
+      213: 5171858724859469700
+    second: quitar el fondo de e_68
+  - first:
+      213: -3203639511625924769
+    second: quitar el fondo de e_69
+  - first:
+      213: -4716303553510189562
+    second: quitar el fondo de e_70
+  - first:
+      213: -7316461276802606407
+    second: quitar el fondo de e_71
+  - first:
+      213: -8735322955994421125
+    second: quitar el fondo de e_72
+  - first:
+      213: -6950655197463914862
+    second: quitar el fondo de e_73
+  - first:
+      213: -3106984054002567044
+    second: quitar el fondo de e_74
+  - first:
+      213: 6952444738107566378
+    second: quitar el fondo de e_75
+  - first:
+      213: -4588250417016555702
+    second: quitar el fondo de e_76
+  - first:
+      213: -1778461573804955225
+    second: quitar el fondo de e_77
+  - first:
+      213: -1396839175389336475
+    second: quitar el fondo de e_78
+  - first:
+      213: -8772488498520593247
+    second: quitar el fondo de e_79
+  - first:
+      213: -8712271627933575162
+    second: quitar el fondo de e_80
+  - first:
+      213: -8304824180669965029
+    second: quitar el fondo de e_81
+  - first:
+      213: 4125138844191660418
+    second: quitar el fondo de e_82
+  - first:
+      213: 8086693956258779959
+    second: quitar el fondo de e_83
+  - first:
+      213: 3615352443435776233
+    second: quitar el fondo de e_84
+  - first:
+      213: 5287344368352135822
+    second: quitar el fondo de e_85
+  - first:
+      213: 3615907078921794328
+    second: quitar el fondo de e_86
+  - first:
+      213: 8804361253104451264
+    second: quitar el fondo de e_87
+  - first:
+      213: 8191810916321627703
+    second: quitar el fondo de e_88
+  - first:
+      213: 6060205914864618123
+    second: quitar el fondo de e_89
+  - first:
+      213: -5882225516030506555
+    second: quitar el fondo de e_90
+  - first:
+      213: 4771405037639184984
+    second: quitar el fondo de e_91
+  - first:
+      213: -8828292960774413374
+    second: quitar el fondo de e_92
+  - first:
+      213: 1416575533825479744
+    second: quitar el fondo de e_93
+  - first:
+      213: 5110168983512053697
+    second: quitar el fondo de e_94
+  - first:
+      213: -792535609440317866
+    second: quitar el fondo de e_95
+  - first:
+      213: -1701936440098032095
+    second: quitar el fondo de e_96
+  - first:
+      213: -4843523333221693210
+    second: quitar el fondo de e_97
+  - first:
+      213: 353246174823048149
+    second: quitar el fondo de e_98
+  - first:
+      213: 8992075866096533363
+    second: quitar el fondo de e_99
+  - first:
+      213: 2475613291798151631
+    second: quitar el fondo de e_100
+  - first:
+      213: -5478274855819690134
+    second: quitar el fondo de e_101
+  - first:
+      213: -7913263645194575947
+    second: quitar el fondo de e_102
+  - first:
+      213: -2332176083820965643
+    second: quitar el fondo de e_103
+  - first:
+      213: 1155810992754620565
+    second: quitar el fondo de e_104
+  - first:
+      213: 1878764028544175987
+    second: quitar el fondo de e_105
+  - first:
+      213: -900749204101913965
+    second: quitar el fondo de e_106
+  - first:
+      213: 7473756871412308155
+    second: quitar el fondo de e_107
+  - first:
+      213: 7634397154822063378
+    second: quitar el fondo de e_108
+  - first:
+      213: -4482177529033430641
+    second: quitar el fondo de e_109
+  - first:
+      213: 7078507974671494977
+    second: quitar el fondo de e_110
+  - first:
+      213: -6927991341800158088
+    second: quitar el fondo de e_111
+  - first:
+      213: -6590550884822127708
+    second: quitar el fondo de e_112
+  - first:
+      213: -9138212209411292315
+    second: quitar el fondo de e_113
+  - first:
+      213: 4824477567131983519
+    second: quitar el fondo de e_114
+  - first:
+      213: 1042325309525886658
+    second: quitar el fondo de e_115
+  - first:
+      213: -1735669330290150645
+    second: quitar el fondo de e_116
+  - first:
+      213: 7337118108718660991
+    second: quitar el fondo de e_117
+  - first:
+      213: 3415824893231302418
+    second: quitar el fondo de e_118
+  - first:
+      213: 4165079735091008834
+    second: quitar el fondo de e_119
+  - first:
+      213: -1249489657269488319
+    second: quitar el fondo de e_120
+  - first:
+      213: -5817570677866503983
+    second: quitar el fondo de e_121
+  - first:
+      213: -606909380149312850
+    second: quitar el fondo de e_122
+  - first:
+      213: 3089153473383711956
+    second: quitar el fondo de e_123
+  - first:
+      213: 373325517935178713
+    second: quitar el fondo de e_124
+  - first:
+      213: 7137819779857232110
+    second: quitar el fondo de e_125
+  - first:
+      213: -9094807290631846995
+    second: quitar el fondo de e_126
+  - first:
+      213: -5498790102917214432
+    second: quitar el fondo de e_127
+  - first:
+      213: 4181190226696016372
+    second: quitar el fondo de e_128
+  - first:
+      213: 2607380482626566991
+    second: quitar el fondo de e_129
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: quitar el fondo de e_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 944
+        width: 319
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5a71fbdc394db30800000000000000
+      internalID: 4311233255183984066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 773
+        width: 104
+        height: 245
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c0e90d3b450dcc0800000000000000
+      internalID: -3688354963540538336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 996
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a1866c3369ae790800000000000000
+      internalID: -7500017080315930019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_3
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 996
+        width: 7
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e0d1cf0a512b020800000000000000
+      internalID: 2355969336236903967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_4
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 900
+        width: 254
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628f2ee5d43dd53b0800000000000000
+      internalID: -5522025238828484570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_5
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 897
+        width: 281
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977cfa85c26a22140800000000000000
+      internalID: 4693496471070164857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 887
+        width: 313
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264257c332e30b2e0800000000000000
+      internalID: -2112119904177675166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_7
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 904
+        width: 10
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3607c24aa2fd1530800000000000000
+      internalID: 3827482071413491258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 865
+        width: 4
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845ea3ad70377d8b0800000000000000
+      internalID: -5127503173174762168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_9
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 845
+        width: 274
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdc2eea005b652b0800000000000000
+      internalID: -5596086472422535755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_10
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 887
+        width: 5
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11912e6c3674a2b0800000000000000
+      internalID: -5574200436860022499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 856
+        width: 4
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e4e301c4d49c230800000000000000
+      internalID: 3659541161300610680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_12
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 727
+        width: 202
+        height: 153
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d161f9ce3fb3c850800000000000000
+      internalID: 6396166172193153496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_13
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 657
+        width: 233
+        height: 223
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccc773078b85fa60800000000000000
+      internalID: 7707219749309500617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_14
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 856
+        width: 68
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59c5db86c6cb58d0800000000000000
+      internalID: -2856470982584579748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_15
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 783
+        width: 280
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fb3e6ec957c53f0800000000000000
+      internalID: -910723707886649535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_16
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 777
+        width: 12
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe7ca31ec676fcc0800000000000000
+      internalID: -3677621418236018947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_17
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 737
+        width: 78
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e8c62ba19e24db0800000000000000
+      internalID: -4809025151206388108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 500
+        width: 328
+        height: 283
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0cd6683b47144180800000000000000
+      internalID: -9132148532564272115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_19
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 776
+        width: 6
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a19ec53179ec4e0800000000000000
+      internalID: -1959462678440633772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_20
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 701
+        width: 96
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbf580a657458800800000000000000
+      internalID: 613975361591835615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_21
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 768
+        width: 5
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0fb9856ac8c1e70800000000000000
+      internalID: 9087292794205892823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_22
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 764
+        width: 8
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f6818c4f3059f90800000000000000
+      internalID: -6947642500285173902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_23
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 768
+        width: 4
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f171107a1ddb42100800000000000000
+      internalID: 82399401347192607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_24
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 769
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a861efe68480027b0800000000000000
+      internalID: -5251188058321185142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_25
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 765
+        width: 4
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00a316c7ece9d2c0800000000000000
+      internalID: -4406230280200544244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 751
+        width: 4
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48730ee483dccfd0800000000000000
+      internalID: -2320247140120299444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 737
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbaa7033b8b0f0c0800000000000000
+      internalID: -4543928944264827947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_28
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 639
+        width: 102
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6db5a93b1bfb210800000000000000
+      internalID: 1350993798181410479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_29
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 710
+        width: 11
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2938fcffb819f0210800000000000000
+      internalID: 1301418847811634066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_30
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 716
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d357e9ae91a295640800000000000000
+      internalID: 5069129146381006141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_31
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 650
+        width: 201
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a48476bdb5c8f7a0800000000000000
+      internalID: -6343102656550763355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_32
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 714
+        width: 4
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67008cc6148569490800000000000000
+      internalID: -7739901871568453514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_33
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 707
+        width: 5
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b99c2edf9931320800000000000000
+      internalID: 2527533131595619078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_34
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 702
+        width: 5
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd5d13886066a4b0800000000000000
+      internalID: -5429546298755949060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_35
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 707
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907bf4cf248b49a90800000000000000
+      internalID: -7308013697475037431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_36
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 662
+        width: 109
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587d36773db2afe00800000000000000
+      internalID: 1079223247949780869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_37
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 659
+        width: 83
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bf5f7b28a59dc20800000000000000
+      internalID: 3231713725093641108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_38
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 696
+        width: 9
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6cc624ad6ed4130800000000000000
+      internalID: 3552749506156873446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_39
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 697
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3504968a2b3a1b0a0800000000000000
+      internalID: -6867527969038319533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_40
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 657
+        width: 52
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61edfaf911916b30800000000000000
+      internalID: 4278860661749834094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_41
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 649
+        width: 72
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f33f1eaa6859f4f0800000000000000
+      internalID: -794506644043123728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_42
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 688
+        width: 9
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73806447b77c64ef0800000000000000
+      internalID: -124192606660458441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_43
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 688
+        width: 6
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4212a1334a02c6b0800000000000000
+      internalID: -5277644529613008305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 692
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29881ea164fdf08d0800000000000000
+      internalID: -2877836144674764654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_45
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 675
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f7d7abac21be610800000000000000
+      internalID: 1651434350282899224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_46
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 668
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4220a2db8c9ae30a0800000000000000
+      internalID: -6899890899452820956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_47
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 667
+        width: 7
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7054b3cf0070be0800000000000000
+      internalID: -1511238066633373734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_48
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 588
+        width: 140
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad26bc08f4c403410800000000000000
+      internalID: 1454746583987610330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_49
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 649
+        width: 7
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e6d9244b46af860800000000000000
+      internalID: 7564469249496673804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_50
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 603
+        width: 45
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff84e29e249c291a0800000000000000
+      internalID: -6804154797786248961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_51
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 632
+        width: 7
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056a38973d5b095e0800000000000000
+      internalID: -1904822722496321968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_52
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 497
+        width: 206
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dc64998751c1270800000000000000
+      internalID: 8222470627383495977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_53
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 460
+        width: 176
+        height: 185
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6431489e504e8b0800000000000000
+      internalID: -5123963975539407112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_54
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 636
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c03bad6a8611890800000000000000
+      internalID: -7489089639497397198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_55
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 454
+        width: 182
+        height: 186
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c16deb852537ee0800000000000000
+      internalID: -1264576529248674784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_56
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 601
+        width: 39
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6a2a3099c602d30800000000000000
+      internalID: 4404639840015132389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_57
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 629
+        width: 5
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911be27395d0f1360800000000000000
+      internalID: 7142442210861953305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_58
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 613
+        width: 9
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0602508f2735b70800000000000000
+      internalID: 8886572899295584426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_59
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 612
+        width: 11
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ab65e0db13e31b0800000000000000
+      internalID: -5675043792381101553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_60
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 608
+        width: 6
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b684cfe37a31f00800000000000000
+      internalID: 1086395824088837019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_61
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 600
+        width: 73
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69573043848750c0800000000000000
+      internalID: -4587051996200609425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_62
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 600
+        width: 7
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9703097d843ac1130800000000000000
+      internalID: 3538882940455891065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_63
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 603
+        width: 8
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643aadf4fc523d840800000000000000
+      internalID: 5247579563144946502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_64
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 603
+        width: 11
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf997eafb7286c1e0800000000000000
+      internalID: -2177909900784985604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_65
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 593
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a112b7d4b80cd5190800000000000000
+      internalID: -7972004060843007718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_66
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 594
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b0cc7ae69c44d80800000000000000
+      internalID: -8267261538846635257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_67
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 574
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fc4394f03c339b0800000000000000
+      internalID: -5101519482460516559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_68
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 576
+        width: 10
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fd0cbcb1226c740800000000000000
+      internalID: 5171858724859469700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_69
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 576
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f712976d26a83d0800000000000000
+      internalID: -3203639511625924769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_70
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 576
+        width: 26
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606dc18f7e25c8eb0800000000000000
+      internalID: -4716303553510189562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_71
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 398
+        width: 172
+        height: 186
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba9747ab35b67a90800000000000000
+      internalID: -7316461276802606407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_72
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 435
+        width: 247
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7823a1ad06e5c680800000000000000
+      internalID: -8735322955994421125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_73
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 398
+        width: 62
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296d0fe8cef4a8f90800000000000000
+      internalID: -6950655197463914862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_74
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 472
+        width: 23
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78bf52e676c1e4d0800000000000000
+      internalID: -3106984054002567044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_75
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 457
+        width: 7
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a296f6757ab0c7060800000000000000
+      internalID: 6952444738107566378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_76
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 464
+        width: 39
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47b0392e824350c0800000000000000
+      internalID: -4588250417016555702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_77
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 435
+        width: 12
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a96cae0f92a157e0800000000000000
+      internalID: -1778461573804955225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_78
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 408
+        width: 53
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ca196bb2e6d9ce0800000000000000
+      internalID: -1396839175389336475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_79
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 465
+        width: 40
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acea71703cd14680800000000000000
+      internalID: -8772488498520593247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_80
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 472
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6081e4e2d1bc71780800000000000000
+      internalID: -8712271627933575162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_81
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 406
+        width: 57
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d971598665fbc80800000000000000
+      internalID: -8304824180669965029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_82
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 457
+        width: 23
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28995314cef6f3930800000000000000
+      internalID: 4125138844191660418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_83
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 462
+        width: 10
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7335a1ede45b93070800000000000000
+      internalID: 8086693956258779959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_84
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 465
+        width: 23
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e874d074ef4c2230800000000000000
+      internalID: 3615352443435776233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_85
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 440
+        width: 37
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a8ac080bb606940800000000000000
+      internalID: 5287344368352135822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_86
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 438
+        width: 44
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81334f394584e2230800000000000000
+      internalID: 3615907078921794328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_87
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 440
+        width: 5
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cef08589ef5f2a70800000000000000
+      internalID: 8804361253104451264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_88
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 473
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e848650a82fa170800000000000000
+      internalID: 8191810916321627703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_89
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 496
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a0a35db2d2a1450800000000000000
+      internalID: 6060205914864618123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_90
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4
+        width: 209
+        height: 480
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9434cfe032e5ea0800000000000000
+      internalID: -5882225516030506555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_91
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1
+        width: 349
+        height: 449
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8523efb0a9f673240800000000000000
+      internalID: 4771405037639184984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_92
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 422
+        width: 4
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3a5f3935a9b7580800000000000000
+      internalID: -8828292960774413374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_93
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 409
+        width: 12
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0445d2351ffa8a310800000000000000
+      internalID: 1416575533825479744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_94
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 425
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7747c9d97fae640800000000000000
+      internalID: 5110168983512053697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_95
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 414
+        width: 7
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e467fef095005f0800000000000000
+      internalID: -792535609440317866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_96
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 408
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126f9a133d18168e0800000000000000
+      internalID: -1701936440098032095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_97
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 408
+        width: 6
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e84106c03958ccb0800000000000000
+      internalID: -4843523333221693210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_98
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 329
+        width: 89
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3e790468bf6e400800000000000000
+      internalID: 353246174823048149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_99
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 326
+        width: 106
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ffb00bb554acc70800000000000000
+      internalID: 8992075866096533363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_100
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 320
+        width: 70
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc14dda2c252b5220800000000000000
+      internalID: 2475613291798151631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_101
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 377
+        width: 4
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fb9e43b0249f3b0800000000000000
+      internalID: -5478274855819690134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_102
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 325
+        width: 73
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf1a2614a07e2290800000000000000
+      internalID: -7913263645194575947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_103
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 248
+        width: 82
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0903a453272afd0800000000000000
+      internalID: -2332176083820965643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_104
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 304
+        width: 10
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59871a269f34a0010800000000000000
+      internalID: 1155810992754620565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_105
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 275
+        width: 66
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f482a0ee5b21a10800000000000000
+      internalID: 1878764028544175987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_106
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 196
+        width: 125
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3922ac90f55ef73f0800000000000000
+      internalID: -900749204101913965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_107
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 103
+        width: 92
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb85a22e64e18b760800000000000000
+      internalID: 7473756871412308155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_108
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 260
+        width: 130
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2150c6773c3d2f960800000000000000
+      internalID: 7634397154822063378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_109
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 297
+        width: 7
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8969b1f84b1cc1c0800000000000000
+      internalID: -4482177529033430641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_110
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 273
+        width: 5
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f601adf79eb3260800000000000000
+      internalID: 7078507974671494977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 208
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c0509a494dadf90800000000000000
+      internalID: -6927991341800158088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_112
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 252
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab6a0473e8a984a0800000000000000
+      internalID: -6590550884822127708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_113
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 209
+        width: 41
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56307ef696c8e2180800000000000000
+      internalID: -9138212209411292315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_114
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 223
+        width: 80
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e1ebf39ccf3f240800000000000000
+      internalID: 4824477567131983519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_115
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 227
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c680b6b855177e00800000000000000
+      internalID: 1042325309525886658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_116
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 134
+        width: 61
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03f388a0f9a9e7e0800000000000000
+      internalID: -1735669330290150645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_117
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 140
+        width: 14
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7df241db0ea2d560800000000000000
+      internalID: 7337118108718660991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_118
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 134
+        width: 72
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2170dff74a2776f20800000000000000
+      internalID: 3415824893231302418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_119
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 141
+        width: 26
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245174793f55dc930800000000000000
+      internalID: 4165079735091008834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_120
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 137
+        width: 7
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1457debd6cbe8aee0800000000000000
+      internalID: -1249489657269488319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_121
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 106
+        width: 96
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0e9029a46d34fa0800000000000000
+      internalID: -5817570677866503983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_122
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 102
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea209516223d397f0800000000000000
+      internalID: -606909380149312850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_123
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 101
+        width: 48
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d443bd87b0eeda20800000000000000
+      internalID: 3089153473383711956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_124
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 69
+        width: 323
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d37d12a4915e2500800000000000000
+      internalID: 373325517935178713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_125
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 130
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0b521a541ae0360800000000000000
+      internalID: 7137819779857232110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_126
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4
+        width: 326
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3814d94f0c8c180800000000000000
+      internalID: -9094807290631846995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_127
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1
+        width: 74
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f8f25098f50b3b0800000000000000
+      internalID: -5498790102917214432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_128
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 72
+        width: 57
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f11d88bb52960a30800000000000000
+      internalID: 4181190226696016372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quitar el fondo de e_129
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 81
+        width: 8
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b3e350cb64f2420800000000000000
+      internalID: 2607380482626566991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
