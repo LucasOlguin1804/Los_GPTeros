@@ -9,11 +9,17 @@ public class ExitPortal : MonoBehaviour
     void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
+
+        if (levelManager == null)
+            Debug.LogWarning("ExitPortal: No se encontr� LevelManager en la escena.");
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+
+        if (other.CompareTag("Player") && levelManager != null)
+
         {
             levelManager.UseExit();
         }

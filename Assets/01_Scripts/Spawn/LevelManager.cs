@@ -18,8 +18,16 @@ public class LevelManager : MonoBehaviour
 
     private int defeatedEnemies = 0;
 
+
+    // NUEVO: referencia opcional al fader si existe en la escena
+    private SceneTransition sceneTransition;
+
     void Start()
     {
+        // cachear SceneTransition si está presente
+        sceneTransition = FindObjectOfType<SceneTransition>();
+
+
         // Si hay portal de salida, decidir si empieza activo o no
         if (exitSpawn != null)
         {
@@ -46,7 +54,15 @@ public class LevelManager : MonoBehaviour
         if (exitSpawn != null && exitSpawn.activeSelf)
         {
             Debug.Log($"🚪 Cargando siguiente nivel: {nextLevelName}");
+
             SceneManager.LoadScene(nextLevelName);
+
+            // Si hay fader en la escena, usar transición; si no, cargar directo (comportamiento actual)
+            if (sceneTransition != null)
+                sceneTransition.LoadScene(nextLevelName);
+            else
+                SceneManager.LoadScene(nextLevelName);
+
         }
         else
         {
@@ -54,5 +70,3 @@ public class LevelManager : MonoBehaviour
         }
     }
 }
-
-
