@@ -17,6 +17,13 @@ public class PlayerController : MonoBehaviour
     public float coyoteTime = 0.1f;
     private float coyoteCounter;
 
+    [Header("Salud")]
+    public int maxHealth = 5;
+    public int currentHealth;
+    public float invulnerabilityDuration = 1f;
+    private bool isInvulnerable = false;
+
+    // Componentes internos
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private bool facingRight = true;
@@ -32,6 +39,9 @@ public class PlayerController : MonoBehaviour
             friction = 0,
             bounciness = 0
         };
+
+        // Inicializa salud
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -59,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleJump()
     {
-        // 🔍 Nueva detección de suelo por OverlapCircle
+        // 🔍 Detección de suelo con OverlapCircle
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Coyote time
@@ -96,5 +106,49 @@ public class PlayerController : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
+    }
+
+    // ========================
+    // 🩸 SISTEMA DE DAÑO / VIDA
+    // ========================
+    public void TakeDamage(int damage)
+    {
+        if (isInvulnerable) return;
+
+        currentHealth -= damage;
+        Debug.Log("Jugador recibe daño: " + damage + " | Vida restante: " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+            return;
+        }
+
+        StartCoroutine(InvulnerabilityFlash());
+    }
+
+    private IEnumerator InvulnerabilityFlash()
+    {
+        isInvulnerable = true;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        float elapsed = 0f;
+        while (elapsed < invulnerabilityDuration)
+        {
+            sr.enabled = !sr.enabled; // parpadea
+            yield return new WaitForSeconds(0.1f);
+            elapsed += 0.1f;
+        }
+
+        sr.enabled = true;
+        isInvulnerable = false;
+    }
+
+    private void Die()
+    {
+        Debug.Log("💀 Jugador ha muerto.");
+        // Aquí puedes reiniciar escena, mostrar pantalla de derrota o animación
+        // usando UnityEngine.SceneManagement:
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
