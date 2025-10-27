@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+<<<<<<< Updated upstream
+=======
+  - enabled: 1
+    path: Assets/00_Scenes/Wave_1.unity
+    guid: c85e866f68c21a54a9d3c7e809cc45d7
+  - enabled: 1
+    path: Assets/00_Scenes/Level_01.unity
+    guid: 16f5c9ea341691341adcd3ff62738039
+  - enabled: 1
+    path: Assets/00_Scenes/Level_02.unity
+    guid: ae7cffe33fe91b846a789b64a6c66cfd
+  - enabled: 1
+    path: Assets/00_Scenes/Level_05.unity
+    guid: ed7e0bf27fa999c4280f3922f4389313
+>>>>>>> Stashed changes
   m_configObjects: {}
