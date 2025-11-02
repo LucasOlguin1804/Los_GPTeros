@@ -1,23 +1,66 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab;   // Prefab de la bala
-    public Transform firePoint;       // Punto de salida del disparo
-    public float bulletSpeed = 10f;   // Velocidad de la bala
+    [Header("Disparo básico (pistola)")]
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float bulletSpeed = 10f;
+    public float pistolFireRate = 0.4f; // tiempo entre disparos de pistola
+    private float lastPistolShot;
 
-    private Vector2 lookDir;          // Direcci�n hacia el mouse
-    private float minDistance = 0.2f; // Distancia m�nima para evitar disparos lentos
+    [Header("Disparo automático (metralleta - PowerUp)")]
+    public bool isAutoMode = false;
+    public float autoFireRate = 0.1f;
+    public int autoBullets = 0;
+
+    [Header("Disparo escopeta (PowerUp)")]
+    public bool isShotgunMode = false;
+    public int pelletsPerShot = 5;
+    public float spreadAngle = 15f;
+    public int shotgunShots = 0;
+    public float shotgunFireRate = 1.5f; // tiempo entre disparos de escopeta
+    private float lastShotgunShot;
+
+    [Header("Daño por arma")]
+    public int pistolDamage = 40;
+    public int autoDamage = 20;
+    public int shotgunDamage = 25;
+
+    private Vector2 lookDir;
+    private float minDistance = 0.2f;
+    private bool isShooting = false;
 
     void Update()
     {
         AimTowardsMouse();
 
-        if (Input.GetMouseButtonDown(0))
+        // 🔫 Pistola normal (un clic cada cierto tiempo)
+        if (!isAutoMode && !isShotgunMode && Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            if (Time.time >= lastPistolShot + pistolFireRate)
+            {
+                Shoot();
+                lastPistolShot = Time.time;
+            }
+        }
+
+        // 🔥 Modo automático
+        if (isAutoMode)
+        {
+            if (Input.GetMouseButtonDown(0) && !isShooting)
+                StartCoroutine(AutoShoot());
+        }
+
+        // 💥 Modo escopeta
+        if (isShotgunMode)
+        {
+            if (Input.GetMouseButtonDown(0) && Time.time >= lastShotgunShot + shotgunFireRate)
+            {
+                StartCoroutine(ShotgunShoot());
+                lastShotgunShot = Time.time;
+            }
         }
     }
 
@@ -25,43 +68,102 @@ public class PlayerShoot : MonoBehaviour
     {
         if (firePoint == null) return;
 
-        // Posici�n del mouse en coordenadas del mundo
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        // Calcular vector desde el FirePoint al mouse
         Vector2 rawDir = mousePos - firePoint.position;
-        float distance = rawDir.magnitude;
+        if (rawDir.magnitude < minDistance) return;
 
-        // Evita valores demasiado peque�os que provocan disparos lentos
-        if (distance < minDistance)
-        {
-            // Mant�n la �ltima direcci�n v�lida, no recalcules a�n
-            return;
-        }
-
-        // Normalizar direcci�n
         lookDir = rawDir.normalized;
-
-        // Calcular el �ngulo de rotaci�n del FirePoint
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     void Shoot()
     {
-        if (bulletPrefab == null || firePoint == null) return;
+        if (bulletPrefab == null || firePoint == null || lookDir == Vector2.zero) return;
 
-        // Si el mouse est� demasiado cerca, no dispares
-        if (lookDir == Vector2.zero) return;
-
-        // Crear la bala
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-        // Aplicar velocidad constante
+        Bullet b = bullet.GetComponent<Bullet>();
+        if (b != null) b.SetDamage(pistolDamage);
+
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = lookDir * bulletSpeed;
 
-        // Destruir despu�s de un tiempo
         Destroy(bullet, 2f);
+    }
+
+    private IEnumerator AutoShoot()
+    {
+        isShooting = true;
+
+        while (Input.GetMouseButton(0) && autoBullets > 0)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+            Bullet b = bullet.GetComponent<Bullet>();
+            if (b != null) b.SetDamage(autoDamage);
+
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = lookDir * bulletSpeed;
+            Destroy(bullet, 2f);
+
+            autoBullets--;
+            yield return new WaitForSeconds(autoFireRate);
+        }
+
+        if (autoBullets <= 0)
+            isAutoMode = false;
+
+        isShooting = false;
+    }
+
+    private IEnumerator ShotgunShoot()
+    {
+        if (shotgunShots <= 0) yield break;
+        shotgunShots--;
+
+        for (int i = 0; i < pelletsPerShot; i++)
+        {
+            float angleOffset = ((i - (pelletsPerShot - 1) / 2f) * spreadAngle);
+            Quaternion pelletRotation = firePoint.rotation * Quaternion.Euler(0f, 0f, angleOffset);
+
+            // 🔹 Pequeño offset lateral para evitar colisiones entre las balas
+            Vector3 offset = firePoint.right * (i - (pelletsPerShot - 1) / 2f) * 0.05f;
+
+            GameObject pellet = Instantiate(bulletPrefab, firePoint.position + offset, pelletRotation);
+
+            Bullet b = pellet.GetComponent<Bullet>();
+            if (b != null) b.SetDamage(shotgunDamage);
+
+            Rigidbody2D rb = pellet.GetComponent<Rigidbody2D>();
+            rb.velocity = pellet.transform.right * bulletSpeed;
+            Destroy(pellet, 2f);
+        }
+
+        if (shotgunShots <= 0)
+            isShotgunMode = false;
+
+        yield return null;
+    }
+
+    // 🟢 Activadores de PowerUps
+    public void ActivateAutoFire(int bulletCount, float newFireRate)
+    {
+        isAutoMode = true;
+        autoBullets = bulletCount;
+        autoFireRate = newFireRate;
+        isShotgunMode = false;
+        Debug.Log($"🔥 Power-Up automático activado con {bulletCount} balas");
+    }
+
+    public void ActivateShotgun(int shots, int pellets, float spread, float rate)
+    {
+        isShotgunMode = true;
+        shotgunShots = shots;
+        pelletsPerShot = pellets;
+        spreadAngle = spread;
+        shotgunFireRate = rate;
+        isAutoMode = false;
+        Debug.Log($"💥 Power-Up escopeta activado: {shots} disparos, {pellets} balas por tiro, dispersión {spread}°");
     }
 }

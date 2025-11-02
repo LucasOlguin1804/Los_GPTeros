@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -13,14 +12,14 @@ public class PlayerHealth : MonoBehaviour
     public float blinkInterval = 0.2f;
 
     [Header("Knockback al recibir daño")]
-    [Tooltip("Fuerza del retroceso horizontal")]
     public float knockbackForce = 7f;
-
-    [Tooltip("Impulso vertical adicional al recibir daño")]
     public float verticalKnockForce = 4f;
-
-    [Tooltip("Duración del retroceso")]
     public float knockbackDuration = 0.25f;
+
+    [Header("Escudo temporal (PowerUp)")]
+    public bool hasShield = false;
+    public float shieldScale = 1.5f;
+    public Color shieldColor = new Color(0f, 1f, 1f, 0.35f);
 
     private int currentHealth;
     private Vector3 spawnPosition;
@@ -28,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     private bool isInvulnerable = false;
     private Rigidbody2D rb;
     private SpriteRenderer[] spriteRenderers;
+    private GameObject shieldVisual;
 
     void Awake()
     {
@@ -47,6 +47,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead || isInvulnerable) return;
 
+        // 🛡️ Chequear si hay escudo activo en PlayerController
+        PlayerController pc = GetComponent<PlayerController>();
+        if (pc != null && pc.IsShieldActive())
+        {
+            Debug.Log("🛡️ Escudo bloqueó el daño en PlayerHealth");
+            return;
+        }
+
         currentHealth -= amount;
         Debug.Log($"❤️‍🔥 Jugador recibió {amount} de daño. Vida restante: {currentHealth}");
 
@@ -65,25 +73,19 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+
     private IEnumerator ApplyKnockback(Vector2 direction)
     {
         if (rb == null) yield break;
 
         rb.velocity = Vector2.zero;
-
-        // 🧭 Agrega un impulso hacia atrás y ligeramente hacia arriba
-        Vector2 force = new Vector2(direction.x * knockbackForce, verticalKnockForce);
-        rb.AddForce(force, ForceMode2D.Impulse);
-
+        rb.AddForce(new Vector2(direction.x * knockbackForce, verticalKnockForce), ForceMode2D.Impulse);
         yield return new WaitForSeconds(knockbackDuration);
-
         rb.velocity = Vector2.zero;
     }
 
     private IEnumerator FlashAllSpritesRed()
     {
-        if (spriteRenderers == null || spriteRenderers.Length == 0) yield break;
-
         foreach (var sr in spriteRenderers)
             if (sr != null) sr.color = Color.red;
 
@@ -107,11 +109,8 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = false;
         currentHealth = maxHealth;
-
         transform.position = spawnPosition;
         gameObject.SetActive(true);
-
-        Debug.Log("🔁 Jugador reapareció en el punto de spawn.");
         StartCoroutine(InvulnerabilityEffect());
     }
 
@@ -119,8 +118,6 @@ public class PlayerHealth : MonoBehaviour
     {
         isInvulnerable = true;
         float elapsed = 0f;
-
-        Debug.Log("🛡️ Jugador invulnerable temporalmente...");
 
         while (elapsed < invulnerableTime)
         {
@@ -135,6 +132,35 @@ public class PlayerHealth : MonoBehaviour
             if (sr != null) sr.enabled = true;
 
         isInvulnerable = false;
-        Debug.Log("✅ Invulnerabilidad terminada, jugador vulnerable otra vez.");
+    }
+
+    // 🛡️ Activador automático del escudo
+    public void ActivateShield(float duration)
+    {
+        if (hasShield) return;
+        hasShield = true;
+
+        // Crear el círculo visual automáticamente
+        shieldVisual = new GameObject("ShieldVisual");
+        shieldVisual.transform.SetParent(transform);
+        shieldVisual.transform.localPosition = Vector3.zero;
+        shieldVisual.transform.localScale = Vector3.one * shieldScale;
+
+        var sr = shieldVisual.AddComponent<SpriteRenderer>();
+        sr.sprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/Background.psd"); // círculo simple integrado
+        sr.color = shieldColor;
+        sr.sortingOrder = 5;
+
+        StartCoroutine(ShieldDuration(duration));
+    }
+
+    private IEnumerator ShieldDuration(float duration)
+    {
+        Debug.Log("🛡️ Escudo activado");
+        yield return new WaitForSeconds(duration);
+
+        hasShield = false;
+        if (shieldVisual != null) Destroy(shieldVisual);
+        Debug.Log("❌ Escudo desactivado");
     }
 }

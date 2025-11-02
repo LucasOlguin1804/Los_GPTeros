@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,9 +8,9 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
 
     [Header("Detección de Suelo")]
-    public Transform groundCheck;          // Punto bajo del jugador
-    public float groundCheckRadius = 0.2f; // Radio del círculo de detección
-    public LayerMask groundLayer;          // Capa del suelo
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
 
     [Header("Coyote Time")]
     public float coyoteTime = 0.1f;
@@ -23,7 +22,11 @@ public class PlayerController : MonoBehaviour
     public float invulnerabilityDuration = 1f;
     private bool isInvulnerable = false;
 
-    // Componentes internos
+    [Header("Escudo")]
+    public GameObject shieldVisual;          // Asignar en el inspector
+    public Vector3 shieldOffset = new Vector3(0f, 0.3f, 0f); // 👈 Ajuste manual desde el Inspector
+    private bool isShieldActive = false;
+
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private bool facingRight = true;
@@ -33,15 +36,16 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
 
-        // Evita que el jugador se "pegue" por fricción
         rb.sharedMaterial = new PhysicsMaterial2D
         {
             friction = 0,
             bounciness = 0
         };
 
-        // Inicializa salud
         currentHealth = maxHealth;
+
+        if (shieldVisual != null)
+            shieldVisual.SetActive(false);
     }
 
     void Update()
@@ -69,16 +73,13 @@ public class PlayerController : MonoBehaviour
 
     void HandleJump()
     {
-        // 🔍 Detección de suelo con OverlapCircle
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Coyote time
         if (isGrounded)
             coyoteCounter = coyoteTime;
         else
             coyoteCounter -= Time.deltaTime;
 
-        // Salto
         if (Input.GetButtonDown("Jump") && coyoteCounter > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -108,11 +109,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ========================
     // 🩸 SISTEMA DE DAÑO / VIDA
-    // ========================
     public void TakeDamage(int damage)
     {
+        if (isShieldActive)
+        {
+            Debug.Log("🛡️ Escudo bloqueó el daño");
+            return;
+        }
+
         if (isInvulnerable) return;
 
         currentHealth -= damage;
@@ -135,7 +140,7 @@ public class PlayerController : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < invulnerabilityDuration)
         {
-            sr.enabled = !sr.enabled; // parpadea
+            sr.enabled = !sr.enabled;
             yield return new WaitForSeconds(0.1f);
             elapsed += 0.1f;
         }
@@ -147,8 +152,57 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         Debug.Log("💀 Jugador ha muerto.");
-        // Aquí puedes reiniciar escena, mostrar pantalla de derrota o animación
-        // usando UnityEngine.SceneManagement:
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // 🛡️ SISTEMA DE ESCUDO
+    public void ActivateShield(float duration)
+    {
+        if (shieldVisual == null)
+        {
+            shieldVisual = transform.Find("ShieldVisual")?.gameObject;
+            if (shieldVisual == null)
+            {
+                Debug.LogWarning("⚠️ No se encontró ShieldVisual en el Player.");
+                return;
+            }
+        }
+
+        StopCoroutine(nameof(ShieldRoutine));
+        StartCoroutine(ShieldRoutine(duration));
+    }
+
+    private IEnumerator ShieldRoutine(float duration)
+    {
+        isShieldActive = true;
+        shieldVisual.SetActive(true);
+
+        // ✅ Mantiene tu offset configurado desde el Inspector
+        shieldVisual.transform.localPosition = shieldOffset;
+
+        SpriteRenderer sr = shieldVisual.GetComponent<SpriteRenderer>();
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            if (sr != null)
+            {
+                float alpha = Mathf.PingPong(Time.time * 2f, 0.5f) + 0.5f;
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
+            }
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        if (sr != null)
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
+
+        shieldVisual.SetActive(false);
+        isShieldActive = false;
+        Debug.Log("❌ Escudo desactivado después de " + duration + "s");
+    }
+
+    public bool IsShieldActive()
+    {
+        return isShieldActive;
     }
 }

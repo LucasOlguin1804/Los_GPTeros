@@ -6,21 +6,37 @@ public class SpawnPlayer : MonoBehaviour
     public static SpawnPlayer instance;
 
     [Header("Player Settings")]
-    public GameObject playerPrefab;   // Prefab del jugador
-    private GameObject currentPlayer; // Referencia al jugador actual
+    public GameObject playerPrefab;
+    private GameObject currentPlayer;
 
     private void Awake()
     {
-        // Singleton: solo una instancia del GameManager
         if (instance == null)
         {
             instance = this;
+
+            // 🔒 Nunca seas hijo de nada de la escena
+            transform.SetParent(null);
+
+            // 🔧 Por si alguien dejó hijos por error en el editor, suéltalos
+            transform.DetachChildren();
+
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    // 👀 Si en runtime alguien intenta colgar algo del GameManager, lo soltamos
+    void OnTransformChildrenChanged()
+    {
+        foreach (Transform child in transform)
+        {
+            Debug.Log($"[SpawnPlayer] Se colgó un hijo inesperado: {child.name}. Lo descolgamos para evitar persistencia.");
+            child.SetParent(null);
         }
     }
 
@@ -31,7 +47,6 @@ public class SpawnPlayer : MonoBehaviour
 
     private void SpawnPlayerAtPoint()
     {
-        // Buscar SpawnPoint en la escena
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
         if (spawnPoint == null)
         {
@@ -39,18 +54,15 @@ public class SpawnPlayer : MonoBehaviour
             return;
         }
 
-        // Verificar si ya hay un jugador en escena
         currentPlayer = GameObject.FindGameObjectWithTag("Player");
 
         if (currentPlayer == null)
-        {
-            // Si no existe, instanciar uno nuevo
             currentPlayer = Instantiate(playerPrefab, spawnPoint.transform.position, Quaternion.identity);
-        }
         else
-        {
-            // Si ya existe, simplemente moverlo al punto de spawn
             currentPlayer.transform.position = spawnPoint.transform.position;
-        }
+
+        // Defensa extra: el Player NUNCA debe ser hijo del GameManager
+        if (currentPlayer.transform.parent == transform)
+            currentPlayer.transform.SetParent(null);
     }
 }

@@ -5,25 +5,21 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [Header("Configuración de la bala")]
-    [Tooltip("Tiempo antes de destruir la bala automáticamente")]
     public float lifeTime = 2f;
-
-    [Tooltip("Daño que inflige la bala al enemigo")]
-    public int damage = 50; // puedes ajustarlo en el inspector
+    public int damage = 50; // valor por defecto, se puede sobrescribir desde PlayerShoot
 
     void Start()
     {
+        // Ignorar colisiones entre balas
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Bullet"), LayerMask.NameToLayer("Bullet"), true);
         Destroy(gameObject, lifeTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("🎯 La bala tocó: " + other.name);
-
-        // Evita destruirse si colisiona con el jugador
         if (other.CompareTag("Player")) return;
+        if (other.CompareTag("Bullet")) return;
 
-        // Si golpea a un enemigo
         if (other.CompareTag("Enemy"))
         {
             EnemySlowPowerful enemy = other.GetComponent<EnemySlowPowerful>();
@@ -35,5 +31,11 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    // 👇 Permite que PlayerShoot asigne el daño dinámicamente
+    public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
     }
 }
