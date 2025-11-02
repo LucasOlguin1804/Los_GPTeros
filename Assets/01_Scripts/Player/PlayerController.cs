@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,9 +8,9 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
 
     [Header("Detección de Suelo")]
-    public Transform groundCheck;          // Punto bajo del jugador
-    public float groundCheckRadius = 0.2f; // Radio del círculo de detección
-    public LayerMask groundLayer;          // Capa del suelo
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
 
     [Header("Coyote Time")]
     public float coyoteTime = 0.1f;
@@ -23,6 +22,10 @@ public class PlayerController : MonoBehaviour
     public float invulnerabilityDuration = 1f;
     private bool isInvulnerable = false;
 
+    [Header("Animación")]
+    private Animator animator;           // <-- NUEVO
+    private SpriteRenderer sr;           // <-- NUEVO
+
     // Componentes internos
     private Rigidbody2D rb;
     private bool isGrounded = false;
@@ -33,14 +36,17 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
 
-        // Evita que el jugador se "pegue" por fricción
-        rb.sharedMaterial = new PhysicsMaterial2D
-        {
-            friction = 0,
-            bounciness = 0
-        };
+        // Asignar Animator y SpriteRenderer
+        animator = GetComponent<Animator>();      // <-- NUEVO
+        sr = GetComponent<SpriteRenderer>();      // <-- NUEVO
 
-        // Inicializa salud
+        // Evitar fricción en el COLLIDER (no en el rigidbody)
+        var col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.sharedMaterial = new PhysicsMaterial2D { friction = 0, bounciness = 0 };
+        }
+
         currentHealth = maxHealth;
     }
 
@@ -49,6 +55,13 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleFacing();
         HandleJump();
+
+        // Parámetros para el Animator
+        if (animator != null)
+        {
+            animator.SetBool("isGrounded", isGrounded);                 // <-- sin espacios
+            animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));       // <-- para correr
+        }
     }
 
     void HandleMovement()
@@ -60,29 +73,26 @@ public class PlayerController : MonoBehaviour
     void HandleFacing()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (mousePos.x > transform.position.x && !facingRight)
-            Flip();
-        else if (mousePos.x < transform.position.x && facingRight)
-            Flip();
+        if (mousePos.x > transform.position.x && !facingRight) Flip();
+        else if (mousePos.x < transform.position.x && facingRight) Flip();
     }
 
     void HandleJump()
     {
-        // 🔍 Detección de suelo con OverlapCircle
+        // Detección de suelo
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Coyote time
-        if (isGrounded)
-            coyoteCounter = coyoteTime;
-        else
-            coyoteCounter -= Time.deltaTime;
+        if (isGrounded) coyoteCounter = coyoteTime;
+        else coyoteCounter -= Time.deltaTime;
 
         // Salto
         if (Input.GetButtonDown("Jump") && coyoteCounter > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
+
+            if (animator != null) animator.SetTrigger("jump"); // opcional
         }
     }
 
@@ -94,10 +104,7 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
-    public int GetDirection()
-    {
-        return facingRight ? 1 : -1;
-    }
+    public int GetDirection() => facingRight ? 1 : -1;
 
     void OnDrawGizmosSelected()
     {
@@ -116,7 +123,7 @@ public class PlayerController : MonoBehaviour
         if (isInvulnerable) return;
 
         currentHealth -= damage;
-        Debug.Log("Jugador recibe daño: " + damage + " | Vida restante: " + currentHealth);
+        Debug.Log($"Jugador recibe daño: {damage} | Vida restante: {currentHealth}");
 
         if (currentHealth <= 0)
         {
@@ -130,12 +137,11 @@ public class PlayerController : MonoBehaviour
     private IEnumerator InvulnerabilityFlash()
     {
         isInvulnerable = true;
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
         float elapsed = 0f;
         while (elapsed < invulnerabilityDuration)
         {
-            sr.enabled = !sr.enabled; // parpadea
+            sr.enabled = !sr.enabled;
             yield return new WaitForSeconds(0.1f);
             elapsed += 0.1f;
         }
@@ -147,8 +153,6 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         Debug.Log("💀 Jugador ha muerto.");
-        // Aquí puedes reiniciar escena, mostrar pantalla de derrota o animación
-        // usando UnityEngine.SceneManagement:
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
