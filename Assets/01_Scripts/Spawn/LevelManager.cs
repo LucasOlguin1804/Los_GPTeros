@@ -49,24 +49,19 @@ public class LevelManager : MonoBehaviour
     }
 
     // Llamar cuando el jugador toque el portal
+    // LevelManager.cs
     public void UseExit()
     {
         if (exitSpawn != null && exitSpawn.activeSelf)
         {
             Debug.Log($"🚪 Cargando siguiente nivel: {nextLevelName}");
-
-            SceneManager.LoadScene(nextLevelName);
-
-            // Si hay fader en la escena, usar transición; si no, cargar directo (comportamiento actual)
-            if (sceneTransition != null)
-                sceneTransition.LoadScene(nextLevelName);
-            else
-                SceneManager.LoadScene(nextLevelName);
-
+            if (sceneTransition != null) sceneTransition.LoadScene(nextLevelName);
+            else SceneManager.LoadScene(nextLevelName);
         }
         else
         {
             Debug.Log("❌ No puedes salir todavía. Falta eliminar enemigos.");
         }
     }
+
 }
