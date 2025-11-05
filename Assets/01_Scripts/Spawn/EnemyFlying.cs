@@ -22,7 +22,7 @@ public class EnemyFlying : MonoBehaviour
     private float nextMeleeTime = 0f;
 
     [Header("Proyectil")]
-    public GameObject projectilePrefab;
+    public GameObject projectilePrefab; // ← tu bala enemiga (BossBulletEnemy)
     public Transform firePoint;
     public float projectileSpeed = 5f;
 
@@ -51,6 +51,7 @@ public class EnemyFlying : MonoBehaviour
         }
     }
 
+    // 🕹️ Movimiento tipo vuelo senoidal
     void MovePattern()
     {
         float y = startPos.y + Mathf.Sin(Time.time * verticalSpeed) * verticalAmplitude;
@@ -70,6 +71,7 @@ public class EnemyFlying : MonoBehaviour
         transform.position = new Vector2(pos.x, y);
     }
 
+    // ⚔️ Daño por contacto cuerpo a cuerpo
     void ContactAttack()
     {
         if (player == null) return;
@@ -79,6 +81,7 @@ public class EnemyFlying : MonoBehaviour
         player.GetComponent<PlayerController>().TakeDamage(contactDamage);
     }
 
+    // 🔫 Disparo hacia el jugador
     void FireAtPlayer()
     {
         nextFireTime = Time.time + fireRate;
@@ -86,16 +89,28 @@ public class EnemyFlying : MonoBehaviour
         if (projectilePrefab == null || firePoint == null || player == null) return;
 
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-        Vector2 dir = (player.position - firePoint.position).normalized;
+
+        // Si usa BossBulletEnemy (el mismo del jefe)
+        BossBulletEnemy bulletScript = bullet.GetComponent<BossBulletEnemy>();
+        if (bulletScript != null)
+        {
+            Vector2 dir = (player.position - firePoint.position).normalized;
+            bulletScript.SetDirection(dir);
+            bulletScript.damage = 5; // 🔥 Daño que hará la bala del enemigo
+            return;
+        }
+
+        // Si no tiene BossBulletEnemy, usamos movimiento por Rigidbody2D
+        Vector2 direction = (player.position - firePoint.position).normalized;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
         if (rb != null)
-            rb.velocity = dir * projectileSpeed;
+            rb.velocity = direction * projectileSpeed;
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
+    // 💥 Recibir daño
     public void TakeDamage(int dmg)
     {
         health -= dmg;
