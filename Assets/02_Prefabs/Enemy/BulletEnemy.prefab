@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3938456520424241753}
   - component: {fileID: 5476774360613235174}
   - component: {fileID: 8080652763183002992}
+  - component: {fileID: -896590301903696630}
   m_Layer: 0
   m_Name: BulletEnemy
   m_TagString: Untagged
@@ -121,3 +122,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-896590301903696630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719619218853789151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9589f209d40e944a866c5c35270a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  speed: 6
+  lifeTime: 3
+  direction: {x: 0, y: 0}

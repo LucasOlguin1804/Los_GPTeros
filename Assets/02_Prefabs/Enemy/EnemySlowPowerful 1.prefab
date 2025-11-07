@@ -179,7 +179,6 @@ MonoBehaviour:
   maxHealth: 100
   damage: 30
   moveSpeed: 1.5
-  patrolRange: 3
   attackCooldown: 1.5
   detectionRange: 4
   attackFlashTime: 0.1
@@ -194,7 +193,7 @@ MonoBehaviour:
     m_Bits: 64
   jumpForce: 15
   maxJumpHeightDifference: 3
-  jumpCooldown: 1
+  jumpCooldown: 1.5
 --- !u!1 &6609548107080907552
 GameObject:
   m_ObjectHideFlags: 0

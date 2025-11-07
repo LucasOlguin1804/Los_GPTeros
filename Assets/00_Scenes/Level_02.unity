@@ -494,7 +494,7 @@ MonoBehaviour:
   damage: 30
   moveSpeed: 1.5
   detectionRange: 4
-  bulletPrefab: {fileID: 6233664731384207147, guid: f9cc18799a9f84545b47a008cc5d559f, type: 3}
+  bulletPrefab: {fileID: 4719619218853789151, guid: 9a9aa15edffde1f4fbc99839958b3cd1, type: 3}
   firePoint: {fileID: 347791453}
   bulletSpeed: 8
   attackCooldown: 1.5
@@ -505,7 +505,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  jumpForce: 6
+  jumpForce: 15
   maxJumpHeightDifference: 3
   jumpCooldown: 1.5
   attackFlashTime: 0.1

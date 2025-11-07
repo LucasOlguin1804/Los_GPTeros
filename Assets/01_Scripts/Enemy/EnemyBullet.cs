@@ -15,10 +15,10 @@ public class EnemyBullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f; // que no caiga
+        rb.gravityScale = 0f;
         rb.velocity = direction.normalized * speed;
 
-        // Rota visualmente la bala hacia su dirección de movimiento
+        // Rotación visual hacia la dirección del disparo
         if (direction != Vector2.zero)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -30,7 +30,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        // Evita que golpee a otros enemigos
+        // Evita golpear a otros enemigos
         if (col.CompareTag("Enemy")) return;
 
         // Daño al jugador
@@ -44,7 +44,7 @@ public class EnemyBullet : MonoBehaviour
             return;
         }
 
-        // Se destruye si choca con el entorno
+        // Se destruye si choca con entorno
         if (col.CompareTag("Ground") || col.CompareTag("Wall") || col.CompareTag("Obstacle"))
         {
             Destroy(gameObject);

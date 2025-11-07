@@ -22,12 +22,31 @@ public class Bullet : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            EnemySlowPowerful enemy = other.GetComponent<EnemySlowPowerful>();
-            if (enemy != null)
+            bool hitSomething = false;
+
+            // 🧠 Comprueba varios tipos de enemigo posibles
+            EnemySlowPowerful enemySlow = other.GetComponent<EnemySlowPowerful>();
+            EnemyShooter enemyShooter = other.GetComponent<EnemyShooter>();
+            EnemyFlying enemyFlying = other.GetComponent<EnemyFlying>();
+
+            if (enemySlow != null)
             {
-                enemy.TakeDamage(damage);
-                Debug.Log($"💥 Bala impactó a {other.name} e hizo {damage} de daño.");
+                enemySlow.TakeDamage(damage);
+                hitSomething = true;
             }
+            else if (enemyShooter != null)
+            {
+                enemyShooter.TakeDamage(damage);
+                hitSomething = true;
+            }
+            else if (enemyFlying != null)
+            {
+                enemyFlying.TakeDamage(damage);
+                hitSomething = true;
+            }
+
+            if (hitSomething)
+                Debug.Log($"💥 Bala impactó a {other.name} e hizo {damage} de daño.");
         }
 
         Destroy(gameObject);
