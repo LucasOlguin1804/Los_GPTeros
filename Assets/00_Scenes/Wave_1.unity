@@ -874,6 +874,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   coyoteTime: 0.1
+  maxHealth: 5
+  currentHealth: 0
+  invulnerabilityDuration: 1
 --- !u!114 &626763297
 MonoBehaviour:
   m_ObjectHideFlags: 0
