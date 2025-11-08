@@ -9,11 +9,18 @@ public class Bullet : MonoBehaviour
     public int damage = 50; // valor por defecto, se puede sobrescribir desde PlayerShoot
 
     void Start()
+{
+    // Ignorar colisiones entre balas
+    Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Bullet"), LayerMask.NameToLayer("Bullet"), true);
+    Destroy(gameObject, lifeTime);
+
+    // ⚠️ Validar que tenga el tag correcto
+    if (!CompareTag("Bullet"))
     {
-        // Ignorar colisiones entre balas
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Bullet"), LayerMask.NameToLayer("Bullet"), true);
-        Destroy(gameObject, lifeTime);
+        Debug.LogWarning($"⚠️ {name} no tiene el tag 'Bullet'. Asigna el tag en el prefab para evitar errores.");
     }
+}
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
