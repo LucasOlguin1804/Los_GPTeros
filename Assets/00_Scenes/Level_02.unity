@@ -491,7 +491,7 @@ MonoBehaviour:
   - {fileID: 1386526653}
   - {fileID: 848068191}
   - {fileID: 1411148258}
-  totalWaves: 2
+  totalWaves: 1
   waveDelay: 2
   waveText: {fileID: 1983634307}
   levelManager: {fileID: 0}
@@ -3577,7 +3577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
