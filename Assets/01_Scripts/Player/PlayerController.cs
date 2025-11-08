@@ -23,9 +23,19 @@ public class PlayerController : MonoBehaviour
     private bool isInvulnerable = false;
 
     [Header("Escudo")]
-    public GameObject shieldVisual;          // Asignar en el inspector
-    public Vector3 shieldOffset = new Vector3(0f, 0.3f, 0f); // 👈 Ajuste manual desde el Inspector
+    public GameObject shieldVisual;
+    public Vector3 shieldOffset = new Vector3(0f, 0.3f, 0f);
     private bool isShieldActive = false;
+
+    [Header("Power-UpJump")]
+    [Tooltip("Número de saltos extra que puede hacer (1 = doble salto, 2 = triple salto, etc.)")]
+    public int maxExtraJumps = 1;
+    private int remainingExtraJumps = 0;
+
+    private bool canDoubleJump = false; // solo se activa temporalmente con power-up
+
+    private bool isSpeedBoostActive = false;
+    public float speedMultiplier = 1.8f;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
@@ -55,6 +65,7 @@ public class PlayerController : MonoBehaviour
         HandleJump();
     }
 
+    // 🧍 MOVIMIENTO
     void HandleMovement()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
@@ -71,20 +82,40 @@ public class PlayerController : MonoBehaviour
             Flip();
     }
 
+    // 🦘 SALTO (con extra configurable)
     void HandleJump()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (isGrounded)
-            coyoteCounter = coyoteTime;
-        else
-            coyoteCounter -= Time.deltaTime;
-
-        if (Input.GetButtonDown("Jump") && coyoteCounter > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false;
+            coyoteCounter = coyoteTime;
+            remainingExtraJumps = canDoubleJump ? maxExtraJumps : 0;
         }
+        else
+        {
+            coyoteCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (coyoteCounter > 0f)
+            {
+                Jump();
+                isGrounded = false;
+            }
+            else if (remainingExtraJumps > 0)
+            {
+                Jump();
+                remainingExtraJumps--;
+                Debug.Log("🌀 Salto extra realizado. Quedan: " + remainingExtraJumps);
+            }
+        }
+    }
+
+    void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     private void Flip()
@@ -95,10 +126,7 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
-    public int GetDirection()
-    {
-        return facingRight ? 1 : -1;
-    }
+    public int GetDirection() => facingRight ? 1 : -1;
 
     void OnDrawGizmosSelected()
     {
@@ -109,7 +137,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 🩸 SISTEMA DE DAÑO / VIDA
+    // 🩸 VIDA / DAÑO
     public void TakeDamage(int damage)
     {
         if (isShieldActive)
@@ -154,7 +182,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("💀 Jugador ha muerto.");
     }
 
-    // 🛡️ SISTEMA DE ESCUDO
+    // 🛡️ ESCUDO
     public void ActivateShield(float duration)
     {
         if (shieldVisual == null)
@@ -175,13 +203,11 @@ public class PlayerController : MonoBehaviour
     {
         isShieldActive = true;
         shieldVisual.SetActive(true);
-
-        // ✅ Mantiene tu offset configurado desde el Inspector
         shieldVisual.transform.localPosition = shieldOffset;
 
         SpriteRenderer sr = shieldVisual.GetComponent<SpriteRenderer>();
-
         float elapsed = 0f;
+
         while (elapsed < duration)
         {
             if (sr != null)
@@ -201,8 +227,45 @@ public class PlayerController : MonoBehaviour
         Debug.Log("❌ Escudo desactivado después de " + duration + "s");
     }
 
-    public bool IsShieldActive()
+    public bool IsShieldActive() => isShieldActive;
+
+    // ⚡ VELOCIDAD
+    public void ActivateSpeedBoost(float duration)
     {
-        return isShieldActive;
+        if (isSpeedBoostActive) StopCoroutine(nameof(SpeedBoostRoutine));
+        StartCoroutine(SpeedBoostRoutine(duration));
+    }
+
+    private IEnumerator SpeedBoostRoutine(float duration)
+    {
+        isSpeedBoostActive = true;
+        float originalSpeed = moveSpeed;
+        moveSpeed *= speedMultiplier;
+
+        Debug.Log("⚡ Aumento de velocidad activado (" + moveSpeed + ")");
+        yield return new WaitForSeconds(duration);
+
+        moveSpeed = originalSpeed;
+        isSpeedBoostActive = false;
+        Debug.Log("❌ Aumento de velocidad finalizado");
+    }
+
+    // 🌀 DOBLE / MÚLTIPLE SALTO
+    public void ActivateDoubleJump(float duration)
+    {
+        StopCoroutine(nameof(DoubleJumpRoutine));
+        StartCoroutine(DoubleJumpRoutine(duration));
+    }
+
+    private IEnumerator DoubleJumpRoutine(float duration)
+    {
+        canDoubleJump = true;
+        Debug.Log("🌀 Power-Up de salto extra activado (" + maxExtraJumps + " saltos)");
+
+        yield return new WaitForSeconds(duration);
+
+        canDoubleJump = false;
+        remainingExtraJumps = 0;
+        Debug.Log("❌ Power-Up de salto extra finalizado");
     }
 }

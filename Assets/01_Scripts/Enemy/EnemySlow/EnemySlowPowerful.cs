@@ -302,11 +302,10 @@ public class EnemySlowPowerful : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
 
-        var levelManager = FindObjectOfType<LevelManager>();
-        if (levelManager != null) levelManager.EnemyDefeated();
-
+        // ❌ eliminar LevelManager.EnemyDefeated()
         Destroy(gameObject);
     }
+
 
     private void OnDrawGizmosSelected()
     {

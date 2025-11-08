@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   m_Color: {r: 0.73367673, g: 0.02264148, b: 1, a: 1}
   m_FlipX: 0
@@ -106,9 +106,10 @@ MonoBehaviour:
   contactDamage: 10
   attackRange: 8
   fireRate: 2
-  projectilePrefab: {fileID: 4719619218853789151, guid: 9a9aa15edffde1f4fbc99839958b3cd1, type: 3}
+  projectilePrefab: {fileID: 4719619218853789151, guid: b2d96ec17209a7f42a8a1c06c00e27d6, type: 3}
   firePoint: {fileID: 2556897864067056434}
   projectileSpeed: 5
+  projectileDamage: 8
   deathEffect: {fileID: 0}
 --- !u!61 &-1115892163001762492
 BoxCollider2D:

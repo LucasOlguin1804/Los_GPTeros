@@ -245,12 +245,10 @@ public class EnemyShooter : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
 
-        var levelManager = FindObjectOfType<LevelManager>();
-        if (levelManager != null)
-            levelManager.EnemyDefeated();
-
+        // ❌ antes notificaba al LevelManager, ahora ya no.
         Destroy(gameObject);
     }
+
 
     private void OnDrawGizmosSelected()
     {

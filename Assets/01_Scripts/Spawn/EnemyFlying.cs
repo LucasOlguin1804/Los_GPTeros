@@ -22,9 +22,10 @@ public class EnemyFlying : MonoBehaviour
     private float nextMeleeTime = 0f;
 
     [Header("Proyectil")]
-    public GameObject projectilePrefab; // ← tu bala enemiga (BossBulletEnemy)
+    public GameObject projectilePrefab; // Prefab con el script EBFlying
     public Transform firePoint;
     public float projectileSpeed = 5f;
+    public int projectileDamage = 8;
 
     [Header("Efectos")]
     public GameObject deathEffect;
@@ -78,10 +79,12 @@ public class EnemyFlying : MonoBehaviour
         if (Time.time < nextMeleeTime) return;
 
         nextMeleeTime = Time.time + fireRate;
-        player.GetComponent<PlayerController>().TakeDamage(contactDamage);
+        PlayerController pc = player.GetComponent<PlayerController>();
+        if (pc != null)
+            pc.TakeDamage(contactDamage);
     }
 
-    // 🔫 Disparo hacia el jugador
+    // 🔫 Disparo hacia el jugador (usa EBFlying)
     void FireAtPlayer()
     {
         nextFireTime = Time.time + fireRate;
@@ -90,31 +93,26 @@ public class EnemyFlying : MonoBehaviour
 
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
-        // Si usa BossBulletEnemy (el mismo del jefe)
-        BossBulletEnemy bulletScript = bullet.GetComponent<BossBulletEnemy>();
-        if (bulletScript != null)
+        // Usa el script EBFlying
+        EBFlying eb = bullet.GetComponent<EBFlying>();
+        if (eb != null)
         {
             Vector2 dir = (player.position - firePoint.position).normalized;
-            bulletScript.SetDirection(dir);
-            bulletScript.damage = 5; // 🔥 Daño que hará la bala del enemigo
+            eb.direction = dir;
+            eb.damage = projectileDamage;
+            eb.speed = projectileSpeed;
             return;
         }
 
-        // Si no tiene BossBulletEnemy, usamos movimiento por Rigidbody2D
-        Vector2 direction = (player.position - firePoint.position).normalized;
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        if (rb != null)
-            rb.velocity = direction * projectileSpeed;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
+        Debug.LogWarning("⚠️ El prefab del proyectil no tiene el script EBFlying asignado.");
     }
 
     // 💥 Recibir daño
     public void TakeDamage(int dmg)
     {
         health -= dmg;
-        if (health <= 0) Die();
+        if (health <= 0)
+            Die();
     }
 
     void Die()
@@ -122,11 +120,11 @@ public class EnemyFlying : MonoBehaviour
         if (deathEffect != null)
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-        if (Spawner.instance != null)
-            Spawner.instance.EnemyKilled();
-
+        // ❌ elimina Spawner y LevelManager.EnemyDefeated()
         Destroy(gameObject);
     }
+
+
 
     void OnTriggerEnter2D(Collider2D other)
     {

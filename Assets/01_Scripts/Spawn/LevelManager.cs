@@ -6,62 +6,40 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [Header("Configuración del nivel")]
-    [Tooltip("Cantidad de enemigos a eliminar antes de activar la salida. Si es 0, la salida estará activa desde el inicio.")]
-    public int requiredEnemies = 5;
-
     [Tooltip("Nombre exacto del siguiente nivel (escena)")]
     public string nextLevelName = "Level3";
 
     [Header("Spawns")]
     public GameObject entrySpawn; // Punto de entrada del jugador
-    public GameObject exitSpawn;  // Portal de salida (desactivado al inicio)
+    public GameObject exitSpawn;  // Portal de salida (activado por WaveManager)
 
-    private int defeatedEnemies = 0;
-
-
-    // NUEVO: referencia opcional al fader si existe en la escena
+    // Referencia opcional al fader si existe
     private SceneTransition sceneTransition;
 
     void Start()
     {
-        // cachear SceneTransition si está presente
+        // Buscar transición de escena si existe
         sceneTransition = FindObjectOfType<SceneTransition>();
 
-
-        // Si hay portal de salida, decidir si empieza activo o no
+        // 🚪 El portal siempre empieza apagado
         if (exitSpawn != null)
-        {
-            bool shouldBeActive = (requiredEnemies <= 0);
-            exitSpawn.SetActive(shouldBeActive);
-        }
+            exitSpawn.SetActive(false);
     }
 
-    // Llamar cuando un enemigo muera
-    public void EnemyDefeated()
-    {
-        defeatedEnemies++;
-
-        if (defeatedEnemies >= requiredEnemies && exitSpawn != null)
-        {
-            exitSpawn.SetActive(true);
-            Debug.Log("✅ Todos los enemigos eliminados, la salida está activada.");
-        }
-    }
-
-    // Llamar cuando el jugador toque el portal
-    // LevelManager.cs
+    // 🚪 Cuando el jugador toca el portal
     public void UseExit()
     {
         if (exitSpawn != null && exitSpawn.activeSelf)
         {
             Debug.Log($"🚪 Cargando siguiente nivel: {nextLevelName}");
-            if (sceneTransition != null) sceneTransition.LoadScene(nextLevelName);
-            else SceneManager.LoadScene(nextLevelName);
+            if (sceneTransition != null)
+                sceneTransition.LoadScene(nextLevelName);
+            else
+                SceneManager.LoadScene(nextLevelName);
         }
         else
         {
-            Debug.Log("❌ No puedes salir todavía. Falta eliminar enemigos.");
+            Debug.Log("❌ No puedes salir todavía. Falta eliminar todas las oleadas.");
         }
     }
-
 }

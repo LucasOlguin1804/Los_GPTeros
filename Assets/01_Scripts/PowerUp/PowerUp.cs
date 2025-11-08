@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public enum PowerUpType { Shield } // 👈 solo el escudo de momento
+    public enum PowerUpType { Speed, DoubleJump, Shield }
     public PowerUpType powerUpType;
+
+    [Header("Duración del efecto (segundos)")]
     public float duration = 5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,14 +16,25 @@ public class PowerUp : MonoBehaviour
         {
             PlayerController player = collision.GetComponent<PlayerController>();
 
-            if (player != null && powerUpType == PowerUpType.Shield)
+            if (player != null)
             {
-                player.ActivateShield(duration);
+                switch (powerUpType)
+                {
+                    case PowerUpType.Speed:
+                        player.ActivateSpeedBoost(duration);
+                        break;
+
+                    case PowerUpType.DoubleJump:
+                        player.ActivateDoubleJump(duration);
+                        break;
+
+                    case PowerUpType.Shield:
+                        player.ActivateShield(duration);
+                        break;
+                }
             }
 
-            Destroy(gameObject);
+            Destroy(gameObject); // Elimina el power-up al recogerlo
         }
     }
 }
-
-
