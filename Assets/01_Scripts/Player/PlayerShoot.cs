@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletSpeed = 10f;
-    public float pistolFireRate = 0.4f; // tiempo entre disparos de pistola
+    public float pistolFireRate = 0.4f;
     private float lastPistolShot;
 
     [Header("Disparo automático (metralleta - PowerUp)")]
@@ -20,13 +20,19 @@ public class PlayerShoot : MonoBehaviour
     public int pelletsPerShot = 5;
     public float spreadAngle = 15f;
     public int shotgunShots = 0;
-    public float shotgunFireRate = 1.5f; // tiempo entre disparos de escopeta
+    public float shotgunFireRate = 1.5f;
     private float lastShotgunShot;
 
     [Header("Daño por arma")]
     public int pistolDamage = 40;
     public int autoDamage = 20;
     public int shotgunDamage = 25;
+
+    [Header("Sonidos de armas")]
+    public AudioClip revolverSound;
+    public AudioClip rifleSound;
+    public AudioClip shotgunSound;
+    [Range(0f, 1f)] public float soundVolume = 0.9f;
 
     private Vector2 lookDir;
     private float minDistance = 0.2f;
@@ -36,24 +42,21 @@ public class PlayerShoot : MonoBehaviour
     {
         AimTowardsMouse();
 
-        // 🔫 Pistola normal (un clic cada cierto tiempo)
         if (!isAutoMode && !isShotgunMode && Input.GetMouseButtonDown(0))
         {
             if (Time.time >= lastPistolShot + pistolFireRate)
             {
-                Shoot();
+                ShootPistol();
                 lastPistolShot = Time.time;
             }
         }
 
-        // 🔥 Modo automático
         if (isAutoMode)
         {
             if (Input.GetMouseButtonDown(0) && !isShooting)
                 StartCoroutine(AutoShoot());
         }
 
-        // 💥 Modo escopeta
         if (isShotgunMode)
         {
             if (Input.GetMouseButtonDown(0) && Time.time >= lastShotgunShot + shotgunFireRate)
@@ -67,7 +70,6 @@ public class PlayerShoot : MonoBehaviour
     void AimTowardsMouse()
     {
         if (firePoint == null) return;
-
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 rawDir = mousePos - firePoint.position;
         if (rawDir.magnitude < minDistance) return;
@@ -77,18 +79,18 @@ public class PlayerShoot : MonoBehaviour
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
-    void Shoot()
+    void ShootPistol()
     {
         if (bulletPrefab == null || firePoint == null || lookDir == Vector2.zero) return;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
         Bullet b = bullet.GetComponent<Bullet>();
         if (b != null) b.SetDamage(pistolDamage);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = lookDir * bulletSpeed;
 
+        PlaySound(revolverSound);
         Destroy(bullet, 2f);
     }
 
@@ -99,14 +101,15 @@ public class PlayerShoot : MonoBehaviour
         while (Input.GetMouseButton(0) && autoBullets > 0)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
             Bullet b = bullet.GetComponent<Bullet>();
             if (b != null) b.SetDamage(autoDamage);
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.velocity = lookDir * bulletSpeed;
-            Destroy(bullet, 2f);
 
+            PlaySound(rifleSound);
+
+            Destroy(bullet, 2f);
             autoBullets--;
             yield return new WaitForSeconds(autoFireRate);
         }
@@ -122,16 +125,15 @@ public class PlayerShoot : MonoBehaviour
         if (shotgunShots <= 0) yield break;
         shotgunShots--;
 
+        PlaySound(shotgunSound);
+
         for (int i = 0; i < pelletsPerShot; i++)
         {
             float angleOffset = ((i - (pelletsPerShot - 1) / 2f) * spreadAngle);
             Quaternion pelletRotation = firePoint.rotation * Quaternion.Euler(0f, 0f, angleOffset);
-
-            // 🔹 Pequeño offset lateral para evitar colisiones entre las balas
             Vector3 offset = firePoint.right * (i - (pelletsPerShot - 1) / 2f) * 0.05f;
 
             GameObject pellet = Instantiate(bulletPrefab, firePoint.position + offset, pelletRotation);
-
             Bullet b = pellet.GetComponent<Bullet>();
             if (b != null) b.SetDamage(shotgunDamage);
 
@@ -146,14 +148,12 @@ public class PlayerShoot : MonoBehaviour
         yield return null;
     }
 
-    // 🟢 Activadores de PowerUps
     public void ActivateAutoFire(int bulletCount, float newFireRate)
     {
         isAutoMode = true;
         autoBullets = bulletCount;
         autoFireRate = newFireRate;
         isShotgunMode = false;
-        Debug.Log($"🔥 Power-Up automático activado con {bulletCount} balas");
     }
 
     public void ActivateShotgun(int shots, int pellets, float spread, float rate)
@@ -164,6 +164,19 @@ public class PlayerShoot : MonoBehaviour
         spreadAngle = spread;
         shotgunFireRate = rate;
         isAutoMode = false;
-        Debug.Log($"💥 Power-Up escopeta activado: {shots} disparos, {pellets} balas por tiro, dispersión {spread}°");
+    }
+
+    // 🎧 PlayClipAtPoint reforzado (asegura reproducción)
+    void PlaySound(AudioClip clip)
+    {
+        if (clip == null) return;
+
+        GameObject tempAudio = new GameObject("TempAudio_" + clip.name);
+        AudioSource source = tempAudio.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.volume = soundVolume;
+        source.spatialBlend = 0f; // 2D
+        source.Play();
+        Destroy(tempAudio, clip.length);
     }
 }

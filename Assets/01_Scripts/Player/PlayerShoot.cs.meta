@@ -3,7 +3,13 @@ guid: 5669fa0b06898144d96a905570817d24
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletPrefab: {instanceID: 0}
+  - firePoint: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - revolverSound: {fileID: 8300000, guid: 7917371bb77e1b6409d1c1bce2881d8b, type: 3}
+  - rifleSound: {fileID: 8300000, guid: f7f5c98a2c512184a8a32201d493e113, type: 3}
+  - shotgunSound: {fileID: 8300000, guid: 855e2c675189efb42ab315db647e5202, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
