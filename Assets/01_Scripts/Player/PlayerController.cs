@@ -31,15 +31,11 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Número de saltos extra que puede hacer (1 = doble salto, 2 = triple salto, etc.)")]
     public int maxExtraJumps = 1;
     private int remainingExtraJumps = 0;
-    private bool canDoubleJump = false;
 
-    [Header("Aumento de Velocidad")]
-    public float speedMultiplier = 1.8f;
+    private bool canDoubleJump = false; // solo se activa temporalmente con power-up
+
     private bool isSpeedBoostActive = false;
-
-    [Header("Animación")]
-    private Animator animator;
-    private SpriteRenderer sr;
+    public float speedMultiplier = 1.8f;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
@@ -50,19 +46,11 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
 
-        animator = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
-
-        // Evitar fricción
-        var col = GetComponent<Collider2D>();
-        if (col != null)
+        rb.sharedMaterial = new PhysicsMaterial2D
         {
-            col.sharedMaterial = new PhysicsMaterial2D
-            {
-                friction = 0,
-                bounciness = 0
-            };
-        }
+            friction = 0,
+            bounciness = 0
+        };
 
         currentHealth = maxHealth;
 
@@ -75,12 +63,6 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleFacing();
         HandleJump();
-
-        if (animator != null)
-        {
-            animator.SetBool("isGrounded", isGrounded);
-            animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
-        }
     }
 
     // 🧍 MOVIMIENTO
@@ -93,11 +75,14 @@ public class PlayerController : MonoBehaviour
     void HandleFacing()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (mousePos.x > transform.position.x && !facingRight) Flip();
-        else if (mousePos.x < transform.position.x && facingRight) Flip();
+
+        if (mousePos.x > transform.position.x && !facingRight)
+            Flip();
+        else if (mousePos.x < transform.position.x && facingRight)
+            Flip();
     }
 
-    // 🦘 SALTO
+    // 🦘 SALTO (con extra configurable)
     void HandleJump()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
@@ -118,13 +103,11 @@ public class PlayerController : MonoBehaviour
             {
                 Jump();
                 isGrounded = false;
-                if (animator != null) animator.SetTrigger("jump");
             }
             else if (remainingExtraJumps > 0)
             {
                 Jump();
                 remainingExtraJumps--;
-                if (animator != null) animator.SetTrigger("jump");
                 Debug.Log("🌀 Salto extra realizado. Quedan: " + remainingExtraJumps);
             }
         }
@@ -159,14 +142,14 @@ public class PlayerController : MonoBehaviour
     {
         if (isShieldActive)
         {
-            Debug.Log("🛡️ Escudo bloqueó el daño");
+            Debug.Log("🛡 Escudo bloqueó el daño");
             return;
         }
 
         if (isInvulnerable) return;
 
         currentHealth -= damage;
-        Debug.Log($"Jugador recibe daño: {damage} | Vida restante: {currentHealth}");
+        Debug.Log("Jugador recibe daño: " + damage + " | Vida restante: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -180,6 +163,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator InvulnerabilityFlash()
     {
         isInvulnerable = true;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
         float elapsed = 0f;
         while (elapsed < invulnerabilityDuration)
@@ -196,10 +180,9 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         Debug.Log("💀 Jugador ha muerto.");
-        // Puedes recargar escena aquí si lo deseas.
     }
 
-    // 🛡️ ESCUDO
+    // 🛡 ESCUDO
     public void ActivateShield(float duration)
     {
         if (shieldVisual == null)
@@ -207,7 +190,7 @@ public class PlayerController : MonoBehaviour
             shieldVisual = transform.Find("ShieldVisual")?.gameObject;
             if (shieldVisual == null)
             {
-                Debug.LogWarning("⚠️ No se encontró ShieldVisual en el Player.");
+                Debug.LogWarning("⚠ No se encontró ShieldVisual en el Player.");
                 return;
             }
         }
@@ -222,22 +205,22 @@ public class PlayerController : MonoBehaviour
         shieldVisual.SetActive(true);
         shieldVisual.transform.localPosition = shieldOffset;
 
-        SpriteRenderer shieldSR = shieldVisual.GetComponent<SpriteRenderer>();
+        SpriteRenderer sr = shieldVisual.GetComponent<SpriteRenderer>();
         float elapsed = 0f;
 
         while (elapsed < duration)
         {
-            if (shieldSR != null)
+            if (sr != null)
             {
                 float alpha = Mathf.PingPong(Time.time * 2f, 0.5f) + 0.5f;
-                shieldSR.color = new Color(shieldSR.color.r, shieldSR.color.g, shieldSR.color.b, alpha);
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
             }
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        if (shieldSR != null)
-            shieldSR.color = new Color(shieldSR.color.r, shieldSR.color.g, shieldSR.color.b, 1f);
+        if (sr != null)
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
 
         shieldVisual.SetActive(false);
         isShieldActive = false;

@@ -163,8 +163,8 @@ public class PlayerHealth : MonoBehaviour
         if (shieldVisual != null) Destroy(shieldVisual);
         Debug.Log("❌ Escudo desactivado");
     }
-    public int GetCurrentHealth()
-    {
-        return currentHealth;
-    }
+    //public int GetCurrentHealth()
+    //{
+    //    return currentHealth;
+    //}
 }
