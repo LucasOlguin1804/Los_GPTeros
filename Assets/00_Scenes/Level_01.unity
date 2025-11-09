@@ -842,7 +842,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-<<<<<<< HEAD
 --- !u!1 &521679018
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,25 +882,11 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &521679020
-=======
---- !u!4 &442885197 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1112568150743807920, guid: 0f426e058c5516f45aa60ab87466a25f, type: 3}
-  m_PrefabInstance: {fileID: 34388581}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &627564277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1112568151474164363, guid: 0f426e058c5516f45aa60ab87466a25f, type: 3}
-  m_PrefabInstance: {fileID: 34388581}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &627564279
->>>>>>> e0c2d32b0053e9c6544b6af5afa6f349f918fe5c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 521679018}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -957,24 +942,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
-=======
-  m_GameObject: {fileID: 627564277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc79a844cdca3347bb4031ccbbf5216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossWave: 3
-  enemiesToNextWave: 3
-  timeBtwSpawn: 1.5
-  topPoint: {fileID: 442885197}
-  bottomPoint: {fileID: 1110107785}
-  enemyPrefabs:
-  - {fileID: 3251391430353146165, guid: 31d3c46c3bdfc404eaba17f3fcb13555, type: 3}
-  bossPrefab: {fileID: 0}
-  waveText: {fileID: 0}
-  gameOverText: {fileID: 0}
->>>>>>> e0c2d32b0053e9c6544b6af5afa6f349f918fe5c
 --- !u!1 &646886129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1638,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-<<<<<<< HEAD
 --- !u!1 &1096823477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,13 +1689,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
---- !u!4 &1110107785 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1112568152209911590, guid: 0f426e058c5516f45aa60ab87466a25f, type: 3}
-  m_PrefabInstance: {fileID: 34388581}
-  m_PrefabAsset: {fileID: 0}
->>>>>>> e0c2d32b0053e9c6544b6af5afa6f349f918fe5c
 --- !u!1 &1199595539
 GameObject:
   m_ObjectHideFlags: 0
