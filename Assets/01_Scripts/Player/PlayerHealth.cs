@@ -102,8 +102,14 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("💀 Jugador ha muerto. Reiniciando posición...");
         gameObject.SetActive(false);
+
+        // ⚡ Registrar muerte global
+        if (GameOverManager.Instance != null)
+            GameOverManager.Instance.PlayerDied();
+
         Invoke(nameof(Respawn), respawnDelay);
     }
+
 
     private void Respawn()
     {
@@ -163,8 +169,5 @@ public class PlayerHealth : MonoBehaviour
         if (shieldVisual != null) Destroy(shieldVisual);
         Debug.Log("❌ Escudo desactivado");
     }
-    //public int GetCurrentHealth()
-    //{
-    //    return currentHealth;
-    //}
 }
+

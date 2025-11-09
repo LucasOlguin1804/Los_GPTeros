@@ -99,5 +99,5 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: -10}
   smoothSpeed: 5
-  minLimit: {x: -8.9, y: -5}
-  maxLimit: {x: 8.9, y: 5}
+  minLimit: {x: -22.7, y: -5}
+  maxLimit: {x: 22.7, y: 5}

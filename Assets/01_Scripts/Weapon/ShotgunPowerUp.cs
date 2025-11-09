@@ -13,7 +13,7 @@ public class ShotgunPowerUp : MonoBehaviour
 
     void Update()
     {
-        //forwar(rotacion en circulo)
+                                //forward y no up(rotacion en circulo)
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
     }
 

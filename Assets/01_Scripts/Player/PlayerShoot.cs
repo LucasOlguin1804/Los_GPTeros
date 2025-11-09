@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletSpeed = 10f;
-    public float pistolFireRate = 0.4f; // tiempo entre disparos de pistola
+    public float pistolFireRate = 0.4f;
     private float lastPistolShot;
 
     [Header("Disparo automático (metralleta - PowerUp)")]
@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
     public int pelletsPerShot = 5;
     public float spreadAngle = 15f;
     public int shotgunShots = 0;
-    public float shotgunFireRate = 1.5f; // tiempo entre disparos de escopeta
+    public float shotgunFireRate = 1.5f;
     private float lastShotgunShot;
 
     [Header("Daño por arma")]
@@ -34,9 +34,13 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
+        // 🛑 Bloquear disparos si el juego está pausado o se acaba de reanudar
+        if (PauseMenu.IsPaused) return;
+        if (Time.unscaledTime < PauseMenu.SuppressInputUntilUnscaled) return;
+
         AimTowardsMouse();
 
-        // 🔫 Pistola normal (un clic cada cierto tiempo)
+        // 🔫 Pistola normal
         if (!isAutoMode && !isShotgunMode && Input.GetMouseButtonDown(0))
         {
             if (Time.time >= lastPistolShot + pistolFireRate)
@@ -46,14 +50,14 @@ public class PlayerShoot : MonoBehaviour
             }
         }
 
-        // 🔥 Modo automático
+        // 🔥 Automático (metralleta)
         if (isAutoMode)
         {
             if (Input.GetMouseButtonDown(0) && !isShooting)
                 StartCoroutine(AutoShoot());
         }
 
-        // 💥 Modo escopeta
+        // 💥 Escopeta
         if (isShotgunMode)
         {
             if (Input.GetMouseButtonDown(0) && Time.time >= lastShotgunShot + shotgunFireRate)
@@ -82,13 +86,11 @@ public class PlayerShoot : MonoBehaviour
         if (bulletPrefab == null || firePoint == null || lookDir == Vector2.zero) return;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
         Bullet b = bullet.GetComponent<Bullet>();
         if (b != null) b.SetDamage(pistolDamage);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = lookDir * bulletSpeed;
-
         Destroy(bullet, 2f);
     }
 
@@ -127,7 +129,6 @@ public class PlayerShoot : MonoBehaviour
             float angleOffset = ((i - (pelletsPerShot - 1) / 2f) * spreadAngle);
             Quaternion pelletRotation = firePoint.rotation * Quaternion.Euler(0f, 0f, angleOffset);
 
-            // 🔹 Pequeño offset lateral para evitar colisiones entre las balas
             Vector3 offset = firePoint.right * (i - (pelletsPerShot - 1) / 2f) * 0.05f;
 
             GameObject pellet = Instantiate(bulletPrefab, firePoint.position + offset, pelletRotation);
@@ -146,7 +147,7 @@ public class PlayerShoot : MonoBehaviour
         yield return null;
     }
 
-    // 🟢 Activadores de PowerUps
+    // 🟢 PowerUps
     public void ActivateAutoFire(int bulletCount, float newFireRate)
     {
         isAutoMode = true;

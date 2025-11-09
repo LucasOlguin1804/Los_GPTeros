@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        sceneTransition.LoadScene("Wave_1");
+        sceneTransition.LoadScene("Level_00");
     }
 
     public void OpenOptions()

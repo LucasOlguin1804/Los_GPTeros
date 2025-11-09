@@ -68,6 +68,13 @@ public class EnemySlowPowerful : MonoBehaviour
 
     void Update()
     {
+        // 🛑 Detener toda lógica si el juego está pausado
+        if (PauseMenu.IsPaused)
+        {
+            rb.velocity = Vector2.zero;  // detiene movimiento inmediato
+            return;
+        }
+
         bool playerActive = player != null && player.gameObject.activeInHierarchy;
 
         // Si el jugador desaparece (respawn)
@@ -117,8 +124,12 @@ public class EnemySlowPowerful : MonoBehaviour
         else if (distanceToPlayer < chaseEnterRange)
             isChasing = true;
 
-        if (isChasing) ChasePlayer(); else Patrol();
+        if (isChasing)
+            ChasePlayer();
+        else
+            Patrol();
     }
+
 
     // 🔹 Patrulla en los límites reales detectados
     void Patrol()

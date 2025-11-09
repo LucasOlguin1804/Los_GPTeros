@@ -65,6 +65,13 @@ public class EnemyShooter : MonoBehaviour
 
     void Update()
     {
+        // 🛑 Detener toda lógica si el juego está pausado
+        if (PauseMenu.IsPaused)
+        {
+            rb.velocity = Vector2.zero;  // detiene el movimiento físico
+            return;
+        }
+
         if (player == null)
         {
             var pObj = GameObject.FindGameObjectWithTag("Player");
@@ -92,6 +99,7 @@ public class EnemyShooter : MonoBehaviour
         else
             Patrol();
     }
+
 
     // 🔹 Patrullaje con detección de bordes reales
     void Patrol()

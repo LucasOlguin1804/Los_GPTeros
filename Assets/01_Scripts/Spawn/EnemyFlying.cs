@@ -40,6 +40,8 @@ public class EnemyFlying : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.IsPaused) return;  // ← añadido
+
         MovePattern();
 
         if (player != null)
@@ -52,6 +54,7 @@ public class EnemyFlying : MonoBehaviour
                 FireAtPlayer();
         }
     }
+
 
     // 🕹 Movimiento tipo vuelo senoidal
     void MovePattern()
